@@ -1,0 +1,35 @@
+project:
+  type: book
+  output-dir: docs
+  
+lang: fr-FR
+author: 
+  - name: Roger MARTIN
+    email: czernai@gmail.com
+book:
+  title: "Essai de statistiques pour EuroDreams"
+  date: "02/23/2026"
+  date-format: dddd DD MMM YYYY
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      dark: superhero
+      light: flatly
+    fontsize: 1.1em
+      
+  pdf:
+    documentclass: scrreprt
+    fontsize: 20pt
+    
+  docx: default
+
+
+

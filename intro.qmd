@@ -1,0 +1,8 @@
+# Introduction
+
+## Outils
+
+1.  un ordinateur ;
+
+2.  RStudio[@RStudiofrwikipedia] comme IDE[@IDEfrwikipedia] (*Integrated Development Environment*, en anglais) ou EDI (Environnement de Développement Intégré)
+

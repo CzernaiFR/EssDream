@@ -1,0 +1,11 @@
+---
+date-modified: last-modified
+---
+
+# Préface {.unnumbered}
+
+Ceci est un livre créé grâce à `Quarto book`. [Pour en savoir plus...](https://quarto.org/docs/books)
+
+Depuis que Knuth[@knuth84] a défini la programmation lettrée[@prog_litt_frwikipedia], j'ai toujours plus ou moins[^index-1] essayé de suivre ce raisonnement.
+
+[^index-1]: et plutôt moins que plus, d'ailleurs

@@ -1,0 +1,62 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Essai de statistiques pour EuroDreams",
+    "section": "",
+    "text": "Préface\nCeci est un livre créé grâce à Quarto book. Pour en savoir plus…\nDepuis que Knuth(Knuth 1984) a défini la programmation lettrée(Wikipédia 2025), j’ai toujours plus ou moins1 essayé de suivre ce raisonnement.",
+    "crumbs": [
+      "Préface"
+    ]
+  },
+  {
+    "objectID": "index.html#footnotes",
+    "href": "index.html#footnotes",
+    "title": "Essai de statistiques pour EuroDreams",
+    "section": "",
+    "text": "et plutôt moins que plus, d’ailleurs↩︎",
+    "crumbs": [
+      "Préface"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "1.1 Outils",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#outils",
+    "href": "intro.html#outils",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "un ordinateur ;\nRStudio(Wikipédia 2026) comme IDE(Wikipédia 2025) (Integrated Development Environment, en anglais) ou EDI (Environnement de Développement Intégré)\n\n\n\n\n\nWikipédia. 2025. « Environnement de développement — Wikipédia, l’encyclopédie libre ». http://fr.wikipedia.org/w/index.php?title=Environnement_de_d%C3%A9veloppement&oldid=231287313.\n\n\n———. 2026. « RStudio — Wikipédia, l’encyclopédie libre ». http://fr.wikipedia.org/w/index.php?title=RStudio&oldid=233205441.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "2  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.\n\n\nWikipédia. 2025a. “Environnement de Développement —\nWikipédia, l’encyclopédie Libre.” http://fr.wikipedia.org/w/index.php?title=Environnement_de_d%C3%A9veloppement&oldid=231287313.\n\n\n———. 2025b. “Programmation Lettrée — Wikipédia,\nl’encyclopédie Libre.” http://fr.wikipedia.org/w/index.php?title=Programmation_lettr%C3%A9e&oldid=229853458.\n\n\n———. 2026. “RStudio — Wikipédia, l’encyclopédie\nLibre.” http://fr.wikipedia.org/w/index.php?title=RStudio&oldid=233205441.",
+    "crumbs": [
+      "References"
+    ]
+  }
+]
