@@ -1,3 +1,7 @@
+---
+date: 2026-02-25
+date-modified: last-modified
+---
 # Introduction
 
 ## Outils
@@ -9,5 +13,6 @@
 3. $R$[@R_frwikipedia] et l'indispensable [`tidyverse`](https://tidyverse.org/) qui permet de manipuler et décortiquer des données ;
 
 4. [`quarto`](https://quarto.org/) qui permet de produire de beaux documents grâce à du simple `markdown`[@Markdownfrwikipedia]. 
+
 
 
