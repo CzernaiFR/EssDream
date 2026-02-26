@@ -4,17 +4,7 @@
     "href": "index.html",
     "title": "Essai de statistiques pour EuroDreams",
     "section": "",
-    "text": "Préface\nCeci est un livre créé grâce à Quarto book. Pour en savoir plus…\nDepuis que Knuth(Knuth 1984) a défini la programmation lettrée(Wikipédia 2025), j’ai toujours plus ou moins1 essayé de suivre ce raisonnement.",
-    "crumbs": [
-      "Préface"
-    ]
-  },
-  {
-    "objectID": "index.html#footnotes",
-    "href": "index.html#footnotes",
-    "title": "Essai de statistiques pour EuroDreams",
-    "section": "",
-    "text": "et plutôt moins que plus, d’ailleurs↩︎",
+    "text": "Préface\nCeci est un livre créé grâce à Quarto book. Pour en savoir plus…\nDepuis que Knuth(Knuth 1984) a défini la programmation lettrée(Wikipédia 2025), j’ai toujours plus ou moins1 essayé de suivre ce raisonnement.\n\n\n\nKnuth, Donald E. 1984. « Literate Programming ». Comput. J. 27 (2): 97‑111. https://doi.org/10.1093/comjnl/27.2.97.\n\nWikipédia. 2025. « Programmation lettrée — Wikipédia, l’encyclopédie libre ». http://fr.wikipedia.org/w/index.php?title=Programmation_lettr%C3%A9e&oldid=229853458.\n1 et plutôt moins que plus, d’ailleurs",
     "crumbs": [
       "Préface"
     ]
@@ -34,7 +24,7 @@
     "href": "intro.html#outils",
     "title": "1  Introduction",
     "section": "",
-    "text": "Un ordinateur ;\nRStudio(RStudiofrwikipedia?) comme IDE(IDEfrwikipedia?) (Integrated Development Environment, en anglais) ou EDI (Environnement de Développement Intégré) ;\n\\(R\\)(Wikipédia 2026c) et l’indispensable tidyverse qui permet de manipuler et décortiquer des données ;\nquarto qui permet de produire de beaux documents grâce à du simple markdown(Markdownfrwikipedia?).",
+    "text": "Un ordinateur ;\nRStudio(RStudiofrwikipedia?) comme IDE(IDEfrwikipedia?) (Integrated Development Environment, en anglais) ou EDI (Environnement de Développement Intégré) ;\n\\(R\\)(Wikipédia 2026c) et l’indispensable tidyverse qui permet de manipuler et décortiquer des données ;\nquarto qui permet de produire de beaux documents grâce à du simple markdown(Markdownfrwikipedia?).\n\n\n———. 2026c. « R (langage) — Wikipédia, l’encyclopédie libre ». http://fr.wikipedia.org/w/index.php?title=R_(langage)&oldid=233026027.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -44,7 +34,7 @@
     "href": "intro.html#sujet",
     "title": "1  Introduction",
     "section": "1.2 Sujet",
-    "text": "1.2 Sujet\nTous les lundi et tous les jeudi, la FDJ(Wikipédia 2026b) et d’autres loteries européennes procèdent à un tirage du jeu EuroDreams(Wikipédia 2026a). Et la promesse est alléchante : \\(30\\,000\\,€\\) par mois pendant 30 ans, le pécule est versé à un ou des héritiers en cas de décès du gagnant avant trente ans.\n\n\n\n\nWikipédia. 2026a. « EuroDreams — Wikipédia, l’encyclopédie libre ». http://fr.wikipedia.org/w/index.php?title=EuroDreams&oldid=232616955.\n\n\n———. 2026b. « FDJ United — Wikipédia, l’encyclopédie libre ». http://fr.wikipedia.org/w/index.php?title=FDJ_United&oldid=233600955.\n\n\n———. 2026c. « R (langage) — Wikipédia, l’encyclopédie libre ». http://fr.wikipedia.org/w/index.php?title=R_(langage)&oldid=233026027.",
+    "text": "1.2 Sujet\nTous les lundi et tous les jeudi, la FDJ(Wikipédia 2026b) et d’autres loteries européennes procèdent à un tirage du jeu EuroDreams(Wikipédia 2026a). Et la promesse est alléchante : \\(30\\,000\\) € par mois pendant 30 ans, le pécule est versé à un ou des héritiers en cas de décès du gagnant avant que les trente ans soient écoulés.\n\n\n\n———. 2026b. « FDJ United — Wikipédia, l’encyclopédie libre ». http://fr.wikipedia.org/w/index.php?title=FDJ_United&oldid=233600955.\n\nWikipédia. 2026a. « EuroDreams — Wikipédia, l’encyclopédie libre ». http://fr.wikipedia.org/w/index.php?title=EuroDreams&oldid=232616955.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
