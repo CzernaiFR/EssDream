@@ -2,7 +2,12 @@
 
 ## Outils
 
-1.  un ordinateur ;
+1. Un ordinateur ;
 
-2.  RStudio[@RStudiofrwikipedia] comme IDE[@IDEfrwikipedia] (*Integrated Development Environment*, en anglais) ou EDI (Environnement de Développement Intégré)
+2.  RStudio[@RStudiofrwikipedia] comme IDE[@IDEfrwikipedia] (*Integrated Development Environment*, en anglais) ou EDI (Environnement de Développement Intégré) ;
+
+3. $R$[@R_frwikipedia] et l'indispensable [`tidyverse`](https://tidyverse.org/) qui permet de manipuler et décortiquer des données ;
+
+4. [`quarto`](https://quarto.org/) qui permet de produire de beaux documents grâce à du simple `markdown`[@Markdownfrwikipedia]. 
+
 

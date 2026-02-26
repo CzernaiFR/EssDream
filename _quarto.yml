@@ -23,11 +23,11 @@ format:
     theme:
       dark: superhero
       light: flatly
-    fontsize: 1.1em
+    fontsize: 15px
       
   pdf:
     documentclass: scrreprt
-    fontsize: 20pt
+    fontsize: 15pt
     
   docx: default
 

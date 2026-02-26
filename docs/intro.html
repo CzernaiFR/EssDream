@@ -64,8 +64,8 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b4afc22eb2518ec519be8d5b5231923a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-ffdfeb337bff79a9cef7ecb9812592fc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-0d503da3bebc1968eccdc0549f16ce00.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-9a7e9a0502fd0eaca66e5ca99ce45802.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -94,6 +94,35 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -364,17 +393,16 @@ div.csl-indent {
 <section id="outils" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="outils"><span class="header-section-number">1.1</span> Outils</h2>
 <ol type="1">
-<li><p>un ordinateur&nbsp;;</p></li>
-<li><p>RStudio<span class="citation" data-cites="RStudiofrwikipedia">(<a href="references.html#ref-RStudiofrwikipedia" role="doc-biblioref">Wikipédia 2026</a>)</span> comme IDE<span class="citation" data-cites="IDEfrwikipedia">(<a href="references.html#ref-IDEfrwikipedia" role="doc-biblioref">Wikipédia 2025</a>)</span> (<em>Integrated Development Environment</em>, en anglais) ou EDI (Environnement de Développement Intégré)</p></li>
+<li><p>Un ordinateur&nbsp;;</p></li>
+<li><p>RStudio<span class="citation" data-cites="RStudiofrwikipedia">(<a href="references.html#ref-RStudiofrwikipedia" role="doc-biblioref"><strong>RStudiofrwikipedia?</strong></a>)</span> comme IDE<span class="citation" data-cites="IDEfrwikipedia">(<a href="references.html#ref-IDEfrwikipedia" role="doc-biblioref"><strong>IDEfrwikipedia?</strong></a>)</span> (<em>Integrated Development Environment</em>, en anglais) ou EDI (Environnement de Développement Intégré)&nbsp;;</p></li>
+<li><p><span class="math inline">\(R\)</span><span class="citation" data-cites="R_frwikipedia">(<a href="references.html#ref-R_frwikipedia" role="doc-biblioref">Wikipédia 2026</a>)</span> et l’indispensable <a href="https://tidyverse.org/"><code>tidyverse</code></a> qui permet de manipuler et décortiquer des données&nbsp;;</p></li>
+<li><p><a href="https://quarto.org/"><code>quarto</code></a> qui permet de produire de beaux documents grâce à du simple <code>markdown</code><span class="citation" data-cites="Markdownfrwikipedia">(<a href="references.html#ref-Markdownfrwikipedia" role="doc-biblioref"><strong>Markdownfrwikipedia?</strong></a>)</span>.</p></li>
 </ol>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-IDEfrwikipedia" class="csl-entry" role="listitem">
-Wikipédia. 2025. <span>«&nbsp;Environnement de développement — Wikipédia<span>,</span> l’encyclopédie libre&nbsp;»</span>. <a href="http://fr.wikipedia.org/w/index.php?title=Environnement_de_d%C3%A9veloppement&amp;oldid=231287313">http://fr.wikipedia.org/w/index.php?title=Environnement_de_d%C3%A9veloppement&amp;oldid=231287313</a>.
-</div>
-<div id="ref-RStudiofrwikipedia" class="csl-entry" role="listitem">
-———. 2026. <span>«&nbsp;RStudio — Wikipédia<span>,</span> l’encyclopédie libre&nbsp;»</span>. <a href="http://fr.wikipedia.org/w/index.php?title=RStudio&amp;oldid=233205441">http://fr.wikipedia.org/w/index.php?title=RStudio&amp;oldid=233205441</a>.
+<div id="ref-R_frwikipedia" class="csl-entry" role="listitem">
+Wikipédia. 2026. <span>«&nbsp;R (langage) — Wikipédia<span>,</span> l’encyclopédie libre&nbsp;»</span>. <a href="http://fr.wikipedia.org/w/index.php?title=R_(langage)&amp;oldid=233026027">http://fr.wikipedia.org/w/index.php?title=R_(langage)&amp;oldid=233026027</a>.
 </div>
 </div>
 </section>

@@ -34,7 +34,7 @@
     "href": "intro.html#outils",
     "title": "1  Introduction",
     "section": "",
-    "text": "un ordinateur ;\nRStudio(Wikipédia 2026) comme IDE(Wikipédia 2025) (Integrated Development Environment, en anglais) ou EDI (Environnement de Développement Intégré)\n\n\n\n\n\nWikipédia. 2025. « Environnement de développement — Wikipédia, l’encyclopédie libre ». http://fr.wikipedia.org/w/index.php?title=Environnement_de_d%C3%A9veloppement&oldid=231287313.\n\n\n———. 2026. « RStudio — Wikipédia, l’encyclopédie libre ». http://fr.wikipedia.org/w/index.php?title=RStudio&oldid=233205441.",
+    "text": "Un ordinateur ;\nRStudio(RStudiofrwikipedia?) comme IDE(IDEfrwikipedia?) (Integrated Development Environment, en anglais) ou EDI (Environnement de Développement Intégré) ;\n\\(R\\)(Wikipédia 2026) et l’indispensable tidyverse qui permet de manipuler et décortiquer des données ;\nquarto qui permet de produire de beaux documents grâce à du simple markdown(Markdownfrwikipedia?).\n\n\n\n\n\nWikipédia. 2026. « R (langage) — Wikipédia, l’encyclopédie libre ». http://fr.wikipedia.org/w/index.php?title=R_(langage)&oldid=233026027.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -54,7 +54,7 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.\n\n\nWikipédia. 2025a. “Environnement de Développement —\nWikipédia, l’encyclopédie Libre.” http://fr.wikipedia.org/w/index.php?title=Environnement_de_d%C3%A9veloppement&oldid=231287313.\n\n\n———. 2025b. “Programmation Lettrée — Wikipédia,\nl’encyclopédie Libre.” http://fr.wikipedia.org/w/index.php?title=Programmation_lettr%C3%A9e&oldid=229853458.\n\n\n———. 2026. “RStudio — Wikipédia, l’encyclopédie\nLibre.” http://fr.wikipedia.org/w/index.php?title=RStudio&oldid=233205441.",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.\n\n\nWikipédia. 2025. “Programmation Lettrée — Wikipédia,\nl’encyclopédie Libre.” http://fr.wikipedia.org/w/index.php?title=Programmation_lettr%C3%A9e&oldid=229853458.\n\n\n———. 2026. “R (Langage) — Wikipédia, l’encyclopédie\nLibre.” http://fr.wikipedia.org/w/index.php?title=R_(langage)&oldid=233026027.",
     "crumbs": [
       "References"
     ]
