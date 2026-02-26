@@ -34,7 +34,7 @@
     "href": "intro.html#outils",
     "title": "1  Introduction",
     "section": "",
-    "text": "Un ordinateur ;\nRStudio(RStudiofrwikipedia?) comme IDE(IDEfrwikipedia?) (Integrated Development Environment, en anglais) ou EDI (Environnement de Développement Intégré) ;\n\\(R\\)(Wikipédia 2026) et l’indispensable tidyverse qui permet de manipuler et décortiquer des données ;\nquarto qui permet de produire de beaux documents grâce à du simple markdown(Markdownfrwikipedia?).\n\n\n\n\n\nWikipédia. 2026. « R (langage) — Wikipédia, l’encyclopédie libre ». http://fr.wikipedia.org/w/index.php?title=R_(langage)&oldid=233026027.",
+    "text": "Un ordinateur ;\nRStudio(RStudiofrwikipedia?) comme IDE(IDEfrwikipedia?) (Integrated Development Environment, en anglais) ou EDI (Environnement de Développement Intégré) ;\n\\(R\\)(Wikipédia 2026) et l’indispensable tidyverse qui permet de manipuler et décortiquer des données ;\nquarto qui permet de produire de beaux documents grâce à du simple markdown(Markdownfrwikipedia?).",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -57,6 +57,16 @@
     "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.\n\n\nWikipédia. 2025. “Programmation Lettrée — Wikipédia,\nl’encyclopédie Libre.” http://fr.wikipedia.org/w/index.php?title=Programmation_lettr%C3%A9e&oldid=229853458.\n\n\n———. 2026. “R (Langage) — Wikipédia, l’encyclopédie\nLibre.” http://fr.wikipedia.org/w/index.php?title=R_(langage)&oldid=233026027.",
     "crumbs": [
       "References"
+    ]
+  },
+  {
+    "objectID": "intro.html#sujet",
+    "href": "intro.html#sujet",
+    "title": "1  Introduction",
+    "section": "1.2 Sujet",
+    "text": "1.2 Sujet\n\n\n\n\nWikipédia. 2026. « R (langage) — Wikipédia, l’encyclopédie libre ». http://fr.wikipedia.org/w/index.php?title=R_(langage)&oldid=233026027.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
   }
 ]

@@ -2,17 +2,19 @@
 date: 2026-02-25
 date-modified: last-modified
 ---
+
 # Introduction
 
 ## Outils
 
-1. Un ordinateur ;
+1.  Un ordinateur ;
 
 2.  RStudio[@RStudiofrwikipedia] comme IDE[@IDEfrwikipedia] (*Integrated Development Environment*, en anglais) ou EDI (Environnement de Développement Intégré) ;
 
-3. $R$[@R_frwikipedia] et l'indispensable [`tidyverse`](https://tidyverse.org/) qui permet de manipuler et décortiquer des données ;
+3.  $R$[@R_frwikipedia] et l'indispensable [`tidyverse`](https://tidyverse.org/) qui permet de manipuler et décortiquer des données ;
 
-4. [`quarto`](https://quarto.org/) qui permet de produire de beaux documents grâce à du simple `markdown`[@Markdownfrwikipedia]. 
+4.  [`quarto`](https://quarto.org/) qui permet de produire de beaux documents grâce à du simple `markdown`[@Markdownfrwikipedia].
 
+## Sujet
 
-
+Tous les lundi et tous les jeudi, la FDJ[@FDJ_frwikipedia] et d'autres loteries européennes procèdent à un tirage du jeu EuroDreams[@EuroDreams_frwikipedia]. Et la promesse est alléchante : $30\,000\,€$ par mois pendant 30 ans, le pécule est versé à un ou des héritiers en cas de décès du gagnant avant trente ans. 
