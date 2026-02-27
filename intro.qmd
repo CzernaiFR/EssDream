@@ -17,4 +17,7 @@ date-modified: last-modified
 
 ## Sujet
 
-Tous les lundi et tous les jeudi, la FDJ[@FDJ_frwikipedia] et d'autres loteries européennes procèdent à un tirage du jeu EuroDreams[@EuroDreams_frwikipedia]. Et la promesse est alléchante : $30\,000$ € par mois pendant 30 ans, le pécule est versé à un ou des héritiers en cas de décès du gagnant avant que les trente ans soient écoulés. 
+Tous les lundi et tous les jeudi, la FDJ[@FDJ_frwikipedia] et d'autres loteries européennes procèdent à un tirage du jeu EuroDreams[@EuroDreams_frwikipedia]. Et la promesse est alléchante : $30\,000$ € par mois pendant 30 ans, le pécule est versé à un ou des héritiers en cas de décès du gagnant avant trente ans écoulés. 
+
+C'est tentant, mais il y a $1$ chance sur plus de $19$ millions de gagner le pactole, pas beaucoup.
+
