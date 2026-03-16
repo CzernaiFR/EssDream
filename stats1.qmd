@@ -18,15 +18,13 @@ library(questionr)
 
 Pour analyser des données, il faut des... données.
 
-La FDJ met à disposition des joueurs[^1] les résultats de **TOUS** ses jeux.
+La FDJ met à disposition des joueurs[^stats1-1] les résultats de **TOUS** ses jeux.
 
-[^1]: et de tout le monde, d'ailleurs
+[^stats1-1]: et de tout le monde, d'ailleurs
 
 Les résultats des [tirages EuroDreams](https://www.sto.api.fdj.fr/anonymous/service-draw-info/v3/documentations/1a2b3c4d-9876-4562-b3fc-2c963f66afa5) sont disponibles sous forme d'un fichier zippé. En cliquant sur le lien ci-dessus, on télécharge un fichier zippé dans le répertoire courant de l'ordinateur hôte.
 
 Comme je suis paresseux, je demande a $R$ de le faire...
-
-## Récupérer l'historique des tirages
 
 ## Récupérer l'historique des tirages
 
@@ -43,18 +41,18 @@ download.file(url, "donnees.zip",  mode = "wb")
 unzip("donnees.zip", exdir = "donnees", overwrite = TRUE)
 ```
 
-Une fois dézippé, c'est un fichier `.csv`[^2] qui contient $32$ colonnes, dont la grande majorité sont inutiles pour les statistiques (nombre de gagnants, montants des gains et autres joyeusetés inutiles).
+Une fois dézippé, c'est un fichier `.csv`[^stats1-2] qui contient $32$ colonnes, dont la grande majorité sont inutiles pour les statistiques (nombre de gagnants, montants des gains et autres joyeusetés inutiles).
 
-[^2]: [ce qu'est un fichier `.csv`](https://fr.wikipedia.org/wiki/Comma-separated_values)
+[^stats1-2]: [ce qu'est un fichier `.csv`](https://fr.wikipedia.org/wiki/Comma-separated_values)
 
 ### Faire le ménage
 
-Il n'y a que $4$ colonnes inintéressantes, voire nécessaires ;
+Il n'y a que $4$ colonnes intéressantes, voire nécessaires ;
 
 -   jour du tirage LUNDI ou JEUDI
 -   date du tirage au format français : jour/mois/année
--   numéros tirés une chaîne de $6$ caractères séparés par un tiret "-"
--   le numéro *dream* tiré en chaîné de caractères
+-   numéros tirés une chaîne de $6$ numéros mais encodés en caractères séparés par un tiret "-"
+-   le numéro *dream* en chaîne de caractères
 
 Donc, on va supprimer ce qui est inutile en indiquant uniquement ce qu'on garde (c'est plus simple).
 
@@ -76,7 +74,7 @@ Petite vérification :
 head(donnees)
 ```
 
-À noter que les tirages sont classés en ordre descendant, les plus récents d'abord. Un peu de nettoyage s'impose. Abréger les noms.
+À noter que les tirages sont classés en ordre descendant, les plus récents d'abord. Encore un peu de nettoyage s'impose. Abréger les noms.
 
 ```{r}
 # le vecteur `noms` contient les noms par paires
@@ -123,9 +121,7 @@ donnees <- donnees |>
   mutate(bg = NULL) 
 ```
 
-On va tranformer `jt` en facteur[^3]
-
-[^3]: [ce qu'est un facteur en $R$](https://bookdown.org/ael/rexplor/chap3.html)
+On va tranformer `jt` en facteur.
 
 ```{r}
 donnees$jt <- donnees$jt |>  
@@ -309,9 +305,9 @@ for (i in 1:nbre_lignes) {
 }
 ```
 
-Pour les écarts, c'est « presque » pareil. Tous les écarts sont à $0$ au départ[^4].
+Pour les écarts, c'est « presque » pareil. Tous les écarts sont à $0$ au départ[^stats1-3].
 
-[^4]: L'écart d'un numéro est ***toujours*** l'écart par rapport au tirage précédent lors duquel ce numéro est sorti et il n'y avait pas de tirage avant le premier.
+[^stats1-3]: L'écart d'un numéro est ***toujours*** l'écart par rapport au tirage précédent lors duquel ce numéro est sorti et il n'y avait pas de tirage avant le premier.
 
 On commence par augmenter ***tous*** les écarts de $1$, puis on met à $0$ les écarts des numéros du tirage examiné.
 
@@ -323,118 +319,43 @@ nums
 summary(nums)
 ```
 
-### Compter les boules
+## Compter les boules
 
+Enfin, presque... Là, on a 6 variables pour chaque numéro de 1 à 40 et chaque numéro dream de 1 à 5 pour les `r nbre_lignes` premières lignes.
+
+### Procédure
+
+Se baser uniquement sur les numéros sortis me parait inutile. Tout aussi inutile que se baser sur le nombre de sorties ou l'écart auquel est sorti un numéro. Ces données changent à chaque tirage. 
+
+On va classer ces données ; $R$ dispose de beaucoup (trop) de routines de classement. J'ai choisi `rank()` en version de base (`average`) qui permet de tenir compte des égalités. Exemple :
 ```{r}
-nums
+a <- c(10, 8, 7, 5, 5, 5, 3, 10, 25)
+names(a) <- a
+b <- rank(a)
+(sort(b))
 ```
+Le plus petit $3$ est classé $1$, les trois $5$ qui suivent prennent la place $3$ pour la moyenne de $2$, $3$ et $4$ (average == moyenne) $7$ et $8$ sont $5$ et $6$, les deux $10$ sont classés $7.5$ (moyenne de $7$ et $6$) et le $25$ est en $9$.
 
-Et pareil pour les numéros `dreams`
-
+Le `percent_rank()` peut aussi être intéressant.
 ```{r}
-dreams
+a <- c(10, 8, 7, 5, 5, 5, 3, 10, 25)
+b <- percent_rank(a)
+b <- round(b * 1000)
+names(b) <- a
+(sort(b))
 ```
+Il classe les données sur une échelle de $0$ à $1$ et, en multipliant par $1000$, on obtient une série.
 
-Commençons par `dreams()`
-
-```{r}
-dreams
-```
-
-## Catégoriser
-
-```{r}
-nums
-```
-
-Essai de rank
-```{r}
-sort(rank(nums$so))
-```
-```{r}
-table(nums$so)
-```
+L'avantage est de ne pas avoir une suite de $0$ à $x$, et la différence entre les occurences est clairement marquée.
 
 
+### Déroulement des opérations
 
-
-Essai de `quant.cut()`
-
-```{r}
-table(dreams$so)
-```
-
-```{r}
-table(quant.cut(dreams$so,
-                nbclass = 3,
-                labels = c("a", "b", "c")
-                ))
-```
-
-
-```{r}
-table(quant.cut(nums$so,
-                nbclass = 20,
-                labels = FALSE))
-```
-
-```{r}
-nums
-```
-donnees <- donnees |> 
-  mutate(n1 = b2[,1], .after = bg) |> 
-  mutate(n2 = b2[,2], .after = n1) |>
-
-```{r}
-nums <- nums |> 
-  mutate(soQ = quant.cut(nums$so,
-                nbclass = 15,
-                labels = FALSE),
-         .after = so)
-nums
-```
-
-
-```{r}
-nums <- nums |> 
-  mutate(soQ = cut(nums$so,
-                breaks = 5,
-                labels = FALSE),
-         .after = so)
-nums
-```
-```{r}
-table(nums$soQ)
-```
-```{r}
-hist(nums$soQ)
-```
-
-```{r}
-nums$soQ <- LETTERS[nums$soQ]
-nums$soQ <- paste0(nums$soQ, ":ST")
-nums
-```
-
-```{r}
-table(nums$soQ)
-```
-
-```{r}
-nums |> 
-  dplyr::count(so) |>
-  mutate(prop = proportions(n) * 100) |> arrange(prop)
-```
-```{r}
-sum(nums$so) / 40
-summary(nums)
-```
-
-
-
-
-
-
-
+1. récupérer les 6 numéros et le numéro dream du tirage `r nbre_lignes + 1`
+1. récupérer les nombres de sorties et les écarts de tout ça
+   1. ranger ces données quelque part
+   1. mettre à jour les données (nombres sorties et écarts) suite au tirages `r nbre_lignes + 1`
+   
+1. retour à 1 pour le tirage `r nbre_lignes + 2` et continuer jusqu'au tirage `r 2*nbre_lignes`
 
 

@@ -341,7 +341,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">index</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">index.html</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -372,20 +372,19 @@ window.Quarto = {
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#récupérer-lhistorique-des-tirages" id="toc-récupérer-lhistorique-des-tirages" class="nav-link active" data-scroll-target="#récupérer-lhistorique-des-tirages"><span class="header-section-number">3.1</span> Récupérer l’historique des tirages</a></li>
-  <li><a href="#récupérer-lhistorique-des-tirages-1" id="toc-récupérer-lhistorique-des-tirages-1" class="nav-link" data-scroll-target="#récupérer-lhistorique-des-tirages-1"><span class="header-section-number">3.2</span> Récupérer l’historique des tirages</a>
+  <li><a href="#récupérer-lhistorique-des-tirages" id="toc-récupérer-lhistorique-des-tirages" class="nav-link active" data-scroll-target="#récupérer-lhistorique-des-tirages"><span class="header-section-number">3.1</span> Récupérer l’historique des tirages</a>
   <ul class="collapse">
-  <li><a href="#faire-le-ménage" id="toc-faire-le-ménage" class="nav-link" data-scroll-target="#faire-le-ménage"><span class="header-section-number">3.2.1</span> Faire le ménage</a></li>
+  <li><a href="#faire-le-ménage" id="toc-faire-le-ménage" class="nav-link" data-scroll-target="#faire-le-ménage"><span class="header-section-number">3.1.1</span> Faire le ménage</a></li>
   </ul></li>
-  <li><a href="#fonctions" id="toc-fonctions" class="nav-link" data-scroll-target="#fonctions"><span class="header-section-number">3.3</span> Fonctions</a>
+  <li><a href="#fonctions" id="toc-fonctions" class="nav-link" data-scroll-target="#fonctions"><span class="header-section-number">3.2</span> Fonctions</a>
   <ul class="collapse">
-  <li><a href="#récupérer-les-données" id="toc-récupérer-les-données" class="nav-link" data-scroll-target="#récupérer-les-données"><span class="header-section-number">3.3.1</span> Récupérer les données</a></li>
+  <li><a href="#récupérer-les-données" id="toc-récupérer-les-données" class="nav-link" data-scroll-target="#récupérer-les-données"><span class="header-section-number">3.2.1</span> Récupérer les données</a></li>
   </ul></li>
-  <li><a href="#premiers-calculs" id="toc-premiers-calculs" class="nav-link" data-scroll-target="#premiers-calculs"><span class="header-section-number">3.4</span> Premiers calculs</a>
+  <li><a href="#premiers-calculs" id="toc-premiers-calculs" class="nav-link" data-scroll-target="#premiers-calculs"><span class="header-section-number">3.3</span> Premiers calculs</a></li>
+  <li><a href="#compter-les-boules" id="toc-compter-les-boules" class="nav-link" data-scroll-target="#compter-les-boules"><span class="header-section-number">3.4</span> Compter les boules</a>
   <ul class="collapse">
-  <li><a href="#compter-les-boules" id="toc-compter-les-boules" class="nav-link" data-scroll-target="#compter-les-boules"><span class="header-section-number">3.4.1</span> Compter les boules</a></li>
+  <li><a href="#déroulement-des-opérations" id="toc-déroulement-des-opérations" class="nav-link" data-scroll-target="#déroulement-des-opérations"><span class="header-section-number">3.4.1</span> Déroulement des opérations</a></li>
   </ul></li>
-  <li><a href="#catégoriser" id="toc-catégoriser" class="nav-link" data-scroll-target="#catégoriser"><span class="header-section-number">3.5</span> Catégoriser</a></li>
   </ul>
 </nav>
     </div>
@@ -419,7 +418,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Modifié</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">27 février 2026</p>
+      <p class="date-modified">10 mars 2026</p>
     </div>
   </div>
     
@@ -441,11 +440,8 @@ window.Quarto = {
 <p>La FDJ met à disposition des joueurs<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> les résultats de <strong>TOUS</strong> ses jeux.</p>
 <div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;et de tout le monde, d’ailleurs</p></div></div><p>Les résultats des <a href="https://www.sto.api.fdj.fr/anonymous/service-draw-info/v3/documentations/1a2b3c4d-9876-4562-b3fc-2c963f66afa5">tirages EuroDreams</a> sont disponibles sous forme d’un fichier zippé. En cliquant sur le lien ci-dessus, on télécharge un fichier zippé dans le répertoire courant de l’ordinateur hôte.</p>
 <p>Comme je suis paresseux, je demande a <span class="math inline">\(R\)</span> de le faire…</p>
-<section id="récupérer-lhistorique-des-tirages" class="level2" data-number="3.1">
+<section id="récupérer-lhistorique-des-tirages" class="level2 page-columns page-full" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="récupérer-lhistorique-des-tirages"><span class="header-section-number">3.1</span> Récupérer l’historique des tirages</h2>
-</section>
-<section id="récupérer-lhistorique-des-tirages-1" class="level2 page-columns page-full" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="récupérer-lhistorique-des-tirages-1"><span class="header-section-number">3.2</span> Récupérer l’historique des tirages</h2>
 <p>On commence par affecter l’adresse du fichier à une variable, puis on invoque <code>dowload.file()</code> pour récupérer le <code>zip</code> et <code>unzip()</code> pour dézipper.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># URL du fichiers de données des tirages sur le site FDJ</span></span>
@@ -456,14 +452,14 @@ window.Quarto = {
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">unzip</span>(<span class="st">"donnees.zip"</span>, <span class="at">exdir =</span> <span class="st">"donnees"</span>, <span class="at">overwrite =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Une fois dézippé, c’est un fichier <code>.csv</code><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> qui contient <span class="math inline">\(32\)</span> colonnes, dont la grande majorité sont inutiles pour les statistiques (nombre de gagnants, montants des gains et autres joyeusetés inutiles).</p>
-<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;<a href="https://fr.wikipedia.org/wiki/Comma-separated_values">ce qu’est un fichier <code>.csv</code></a></p></div></div><section id="faire-le-ménage" class="level3 page-columns page-full" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="faire-le-ménage"><span class="header-section-number">3.2.1</span> Faire le ménage</h3>
-<p>Il n’y a que <span class="math inline">\(4\)</span> colonnes inintéressantes, voire nécessaires&nbsp;;</p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;<a href="https://fr.wikipedia.org/wiki/Comma-separated_values">ce qu’est un fichier <code>.csv</code></a></p></div></div><section id="faire-le-ménage" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="faire-le-ménage"><span class="header-section-number">3.1.1</span> Faire le ménage</h3>
+<p>Il n’y a que <span class="math inline">\(4\)</span> colonnes intéressantes, voire nécessaires&nbsp;;</p>
 <ul>
 <li>jour du tirage LUNDI ou JEUDI</li>
 <li>date du tirage au format français&nbsp;: jour/mois/année</li>
-<li>numéros tirés une chaîne de <span class="math inline">\(6\)</span> caractères séparés par un tiret “-”</li>
-<li>le numéro <em>dream</em> tiré en chaîné de caractères</li>
+<li>numéros tirés une chaîne de <span class="math inline">\(6\)</span> numéros mais encodés en caractères séparés par un tiret “-”</li>
+<li>le numéro <em>dream</em> en chaîne de caractères</li>
 </ul>
 <p>Donc, on va supprimer ce qui est inutile en indiquant uniquement ce qu’on garde (c’est plus simple).</p>
 <div class="cell">
@@ -481,7 +477,7 @@ window.Quarto = {
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>New names:
-Rows: 242 Columns: 35
+Rows: 245 Columns: 35
 ── Column specification
 ──────────────────────────────────────────────────────── Delimiter: ";" chr
 (5): jour_de_tirage, date_de_tirage, date_de_forclusion, boules_gagnant... dbl
@@ -499,15 +495,15 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 <pre><code># A tibble: 6 × 4
   jour_de_tirage date_de_tirage boules_gagnantes_en_ordre_croissant numero_dream
   &lt;chr&gt;          &lt;chr&gt;          &lt;chr&gt;                                      &lt;dbl&gt;
-1 JEUDI          26/02/2026     -17-18-19-21-23-36-                            4
-2 LUNDI          23/02/2026     -1-7-12-25-26-39-                              1
-3 JEUDI          19/02/2026     -8-10-13-36-37-38-                             4
-4 LUNDI          16/02/2026     -6-10-13-24-26-38-                             3
-5 JEUDI          12/02/2026     -17-27-30-33-34-36-                            3
-6 LUNDI          09/02/2026     -9-11-19-22-33-36-                             3</code></pre>
+1 LUNDI          09/03/2026     -5-14-32-34-35-37-                             3
+2 JEUDI          05/03/2026     -6-18-22-32-37-38-                             4
+3 LUNDI          02/03/2026     -1-8-11-14-18-35-                              3
+4 JEUDI          26/02/2026     -17-18-19-21-23-36-                            4
+5 LUNDI          23/02/2026     -1-7-12-25-26-39-                              1
+6 JEUDI          19/02/2026     -8-10-13-36-37-38-                             4</code></pre>
 </div>
 </div>
-<p>À noter que les tirages sont classés en ordre descendant, les plus récents d’abord. Un peu de nettoyage s’impose. Abréger les noms.</p>
+<p>À noter que les tirages sont classés en ordre descendant, les plus récents d’abord. Encore un peu de nettoyage s’impose. Abréger les noms.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># le vecteur `noms` contient les noms par paires</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co">#   "nouveau nom" = "ancien nom"</span></span>
@@ -524,12 +520,12 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 <pre><code># A tibble: 6 × 4
   jt    dt         bg                     nd
   &lt;chr&gt; &lt;chr&gt;      &lt;chr&gt;               &lt;dbl&gt;
-1 J     26/02/2026 -17-18-19-21-23-36-     4
-2 L     23/02/2026 -1-7-12-25-26-39-       1
-3 J     19/02/2026 -8-10-13-36-37-38-      4
-4 L     16/02/2026 -6-10-13-24-26-38-      3
-5 J     12/02/2026 -17-27-30-33-34-36-     3
-6 L     09/02/2026 -9-11-19-22-33-36-      3</code></pre>
+1 L     09/03/2026 -5-14-32-34-35-37-      3
+2 J     05/03/2026 -6-18-22-32-37-38-      4
+3 L     02/03/2026 -1-8-11-14-18-35-       3
+4 J     26/02/2026 -17-18-19-21-23-36-     4
+5 L     23/02/2026 -1-7-12-25-26-39-       1
+6 J     19/02/2026 -8-10-13-36-37-38-      4</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -550,12 +546,12 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 <span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(b2)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3] [,4] [,5] [,6]
-[1,]   17   18   19   21   23   36
-[2,]    1    7   12   25   26   39
-[3,]    8   10   13   36   37   38
-[4,]    6   10   13   24   26   38
-[5,]   17   27   30   33   34   36
-[6,]    9   11   19   22   33   36</code></pre>
+[1,]    5   14   32   34   35   37
+[2,]    6   18   22   32   37   38
+[3,]    1    8   11   14   18   35
+[4,]   17   18   19   21   23   36
+[5,]    1    7   12   25   26   39
+[6,]    8   10   13   36   37   38</code></pre>
 </div>
 </div>
 <p>Affecter chaque colonnes de la matrice à une colonne du <code>tibble()</code></p>
@@ -569,8 +565,8 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 <span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">n6 =</span> b2[,<span class="dv">6</span>], <span class="at">.after =</span> n5) <span class="sc">|&gt;</span> </span>
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">bg =</span> <span class="cn">NULL</span>) </span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>On va tranformer <code>jt</code> en facteur<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
-<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;<a href="https://bookdown.org/ael/rexplor/chap3.html">ce qu’est un facteur en <span class="math inline">\(R\)</span></a></p></div></div><div class="cell">
+<p>On va tranformer <code>jt</code> en facteur.</p>
+<div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>donnees<span class="sc">$</span>jt <span class="ot">&lt;-</span> donnees<span class="sc">$</span>jt <span class="sc">|&gt;</span>  </span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">factor</span>(<span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"L"</span>, <span class="st">"J"</span>))</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -598,20 +594,20 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(donnees)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> jt            dt                   n1               n2              n3      
- L:121   Min.   :2023-11-06   Min.   : 1.000   Min.   : 2.00   Min.   : 3.0  
- J:121   1st Qu.:2024-06-03   1st Qu.: 2.000   1st Qu.: 7.00   1st Qu.:13.0  
-         Median :2024-12-31   Median : 4.000   Median :11.00   Median :18.0  
-         Mean   :2024-12-31   Mean   : 5.888   Mean   :11.91   Mean   :17.7  
-         3rd Qu.:2025-07-30   3rd Qu.: 8.000   3rd Qu.:16.00   3rd Qu.:22.0  
-         Max.   :2026-02-26   Max.   :18.000   Max.   :31.00   Max.   :33.0  
-       n4              n5              n6              nd       
- Min.   : 6.00   Min.   :10.00   Min.   :16.00   Min.   :1.000  
- 1st Qu.:20.00   1st Qu.:25.00   1st Qu.:32.00   1st Qu.:2.000  
- Median :23.00   Median :30.00   Median :36.50   Median :3.000  
- Mean   :23.33   Mean   :29.28   Mean   :34.88   Mean   :2.901  
- 3rd Qu.:28.00   3rd Qu.:33.75   3rd Qu.:39.00   3rd Qu.:4.000  
- Max.   :37.00   Max.   :39.00   Max.   :40.00   Max.   :5.000  </code></pre>
+<pre><code> jt            dt                   n1               n2              n3       
+ L:123   Min.   :2023-11-06   Min.   : 1.000   Min.   : 2.00   Min.   : 3.00  
+ J:122   1st Qu.:2024-06-06   1st Qu.: 2.000   1st Qu.: 7.00   1st Qu.:13.00  
+         Median :2025-01-06   Median : 4.000   Median :11.00   Median :18.00  
+         Mean   :2025-01-05   Mean   : 5.865   Mean   :11.93   Mean   :17.75  
+         3rd Qu.:2025-08-07   3rd Qu.: 8.000   3rd Qu.:16.00   3rd Qu.:22.00  
+         Max.   :2026-03-09   Max.   :18.000   Max.   :31.00   Max.   :33.00  
+       n4              n5              n6             nd       
+ Min.   : 6.00   Min.   :10.00   Min.   :16.0   Min.   :1.000  
+ 1st Qu.:20.00   1st Qu.:25.00   1st Qu.:32.0   1st Qu.:2.000  
+ Median :23.00   Median :30.00   Median :37.0   Median :3.000  
+ Mean   :23.37   Mean   :29.29   Mean   :34.9   Mean   :2.906  
+ 3rd Qu.:28.00   3rd Qu.:34.00   3rd Qu.:39.0   3rd Qu.:4.000  
+ Max.   :37.00   Max.   :39.00   Max.   :40.0   Max.   :5.000  </code></pre>
 </div>
 </div>
 <div class="cell">
@@ -620,10 +616,10 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 </div>
 </section>
 </section>
-<section id="fonctions" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="fonctions"><span class="header-section-number">3.3</span> Fonctions</h2>
-<section id="récupérer-les-données" class="level3" data-number="3.3.1">
-<h3 data-number="3.3.1" class="anchored" data-anchor-id="récupérer-les-données"><span class="header-section-number">3.3.1</span> Récupérer les données</h3>
+<section id="fonctions" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="fonctions"><span class="header-section-number">3.2</span> Fonctions</h2>
+<section id="récupérer-les-données" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="récupérer-les-données"><span class="header-section-number">3.2.1</span> Récupérer les données</h3>
 <p>Les 3 fonctions ci-dessous permettent de récupérer des éléments dans le jeu de données <code>donnees</code>.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>recup_n1_n6 <span class="ot">&lt;-</span>    <span class="co"># récupère les 6 numéros</span></span>
@@ -719,8 +715,8 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 </div>
 </section>
 </section>
-<section id="premiers-calculs" class="level2 page-columns page-full" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="premiers-calculs"><span class="header-section-number">3.4</span> Premiers calculs</h2>
+<section id="premiers-calculs" class="level2 page-columns page-full" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="premiers-calculs"><span class="header-section-number">3.3</span> Premiers calculs</h2>
 <p>On va prendre le tiers pour les données initiales.</p>
 <p>Remplir les colonnes des <code>nums</code> et <code>dream</code>. Et commencer à créer des données. Récupérer le nombre de tirages et en retenir <span class="math inline">\(\frac{1}{3}\)</span>.</p>
 <div class="cell">
@@ -729,10 +725,10 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>nbre_lignes</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 81</code></pre>
+<pre><code>[1] 82</code></pre>
 </div>
 </div>
-<p>Puis, itérer sur les 81 premières lignes de <code>donnees</code>.</p>
+<p>Puis, itérer sur les 82 premières lignes de <code>donnees</code>.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>nbre_lignes) {</span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>  j <span class="ot">&lt;-</span> <span class="fu">recup_jt</span>(i)      <span class="co">#</span></span>
@@ -785,331 +781,65 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 <span id="cb30-49"><a href="#cb30-49" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb30-50"><a href="#cb30-50" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>Pour les écarts, c’est «&nbsp;presque&nbsp;» pareil. Tous les écarts sont à <span class="math inline">\(0\)</span> au départ<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</p>
-<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;L’écart d’un numéro est <strong><em>toujours</em></strong> l’écart par rapport au tirage précédent lors duquel ce numéro est sorti et il n’y avait pas de tirage avant le premier.</p></div></div><p>On commence par augmenter <strong><em>tous</em></strong> les écarts de <span class="math inline">\(1\)</span>, puis on met à <span class="math inline">\(0\)</span> les écarts des numéros du tirage examiné.</p>
+<p>Pour les écarts, c’est «&nbsp;presque&nbsp;» pareil. Tous les écarts sont à <span class="math inline">\(0\)</span> au départ<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;L’écart d’un numéro est <strong><em>toujours</em></strong> l’écart par rapport au tirage précédent lors duquel ce numéro est sorti et il n’y avait pas de tirage avant le premier.</p></div></div><p>On commence par augmenter <strong><em>tous</em></strong> les écarts de <span class="math inline">\(1\)</span>, puis on met à <span class="math inline">\(0\)</span> les écarts des numéros du tirage examiné.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>nums</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 40 × 7
       nu    so  so_L  so_J    ec  ec_L  ec_J
    &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
- 1     1    10     5     5     3     2     1
- 2     2    16     9     7     1    11     0
- 3     3    18    10     8     2     1     2
- 4     4     8     3     5    11     6     5
- 5     5    10     4     6     4     2     4
- 6     6     9     6     3     3    16     1
- 7     7    10     5     5    15     9     7
- 8     8    15     5    10     1     6     0
- 9     9    10     4     6     1     2     0
-10    10    12     6     6     0     0    10
+ 1     1    10     5     5     4     2     2
+ 2     2    16     9     7     2    11     1
+ 3     3    18    10     8     3     1     3
+ 4     4     8     3     5    12     6     6
+ 5     5    10     4     6     5     2     5
+ 6     6    10     6     4     0    16     0
+ 7     7    10     5     5    16     9     8
+ 8     8    15     5    10     2     6     1
+ 9     9    10     4     6     2     2     1
+10    10    12     6     6     1     0    11
 # ℹ 30 more rows</code></pre>
 </div>
 </div>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(nums)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>       nu              so             so_L            so_J          ec        
- Min.   : 1.00   Min.   : 3.00   Min.   : 2.00   Min.   : 1   Min.   : 0.000  
- 1st Qu.:10.75   1st Qu.:10.00   1st Qu.: 4.75   1st Qu.: 4   1st Qu.: 1.000  
- Median :20.50   Median :12.00   Median : 6.00   Median : 6   Median : 3.000  
- Mean   :20.50   Mean   :12.15   Mean   : 6.15   Mean   : 6   Mean   : 6.275  
- 3rd Qu.:30.25   3rd Qu.:15.00   3rd Qu.: 7.25   3rd Qu.: 8   3rd Qu.: 9.250  
- Max.   :40.00   Max.   :22.00   Max.   :12.00   Max.   :11   Max.   :35.000  
-      ec_L            ec_J      
- Min.   : 0.00   Min.   : 0.00  
- 1st Qu.: 1.75   1st Qu.: 1.00  
- Median : 4.50   Median : 3.00  
- Mean   : 5.75   Mean   : 5.85  
- 3rd Qu.: 9.00   3rd Qu.: 9.00  
- Max.   :23.00   Max.   :35.00  </code></pre>
-</div>
-</div>
-<section id="compter-les-boules" class="level3" data-number="3.4.1">
-<h3 data-number="3.4.1" class="anchored" data-anchor-id="compter-les-boules"><span class="header-section-number">3.4.1</span> Compter les boules</h3>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>nums</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 40 × 7
-      nu    so  so_L  so_J    ec  ec_L  ec_J
-   &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
- 1     1    10     5     5     3     2     1
- 2     2    16     9     7     1    11     0
- 3     3    18    10     8     2     1     2
- 4     4     8     3     5    11     6     5
- 5     5    10     4     6     4     2     4
- 6     6     9     6     3     3    16     1
- 7     7    10     5     5    15     9     7
- 8     8    15     5    10     1     6     0
- 9     9    10     4     6     1     2     0
-10    10    12     6     6     0     0    10
-# ℹ 30 more rows</code></pre>
-</div>
-</div>
-<p>Et pareil pour les numéros <code>dreams</code></p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>dreams</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 5 × 7
-     nu    so  so_L  so_J    ec  ec_L  ec_J
-  &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-1     1    22     8    14     7    13     3
-2     2    12     5     7     0     0     0
-3     3    15    11     4     4     2     5
-4     4    16    10     6     5     3     2
-5     5    16     7     9     2     1     1</code></pre>
-</div>
-</div>
-<p>Commençons par <code>dreams()</code></p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>dreams</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 5 × 7
-     nu    so  so_L  so_J    ec  ec_L  ec_J
-  &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-1     1    22     8    14     7    13     3
-2     2    12     5     7     0     0     0
-3     3    15    11     4     4     2     5
-4     4    16    10     6     5     3     2
-5     5    16     7     9     2     1     1</code></pre>
+<pre><code>       nu              so            so_L            so_J      
+ Min.   : 1.00   Min.   : 4.0   Min.   : 2.00   Min.   : 2.00  
+ 1st Qu.:10.75   1st Qu.:10.0   1st Qu.: 4.75   1st Qu.: 5.00  
+ Median :20.50   Median :12.0   Median : 6.00   Median : 6.00  
+ Mean   :20.50   Mean   :12.3   Mean   : 6.15   Mean   : 6.15  
+ 3rd Qu.:30.25   3rd Qu.:15.0   3rd Qu.: 7.25   3rd Qu.: 8.00  
+ Max.   :40.00   Max.   :22.0   Max.   :12.00   Max.   :11.00  
+       ec              ec_L            ec_J       
+ Min.   : 0.000   Min.   : 0.00   Min.   : 0.000  
+ 1st Qu.: 1.000   1st Qu.: 1.75   1st Qu.: 1.000  
+ Median : 3.500   Median : 4.50   Median : 3.000  
+ Mean   : 6.125   Mean   : 5.75   Mean   : 6.125  
+ 3rd Qu.: 7.500   3rd Qu.: 9.00   3rd Qu.: 8.500  
+ Max.   :36.000   Max.   :23.00   Max.   :36.000  </code></pre>
 </div>
 </div>
 </section>
+<section id="compter-les-boules" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="compter-les-boules"><span class="header-section-number">3.4</span> Compter les boules</h2>
+<p>Enfin, presque… Là, on a 6 variables pour chaque numéro de 1 à 40 et chaque numéro dream de 1 à 5 pour les 82 premières lignes.</p>
+<p>Maintenant il faut récupérer les numéros et le numéro <code>dream</code> de la ligne 83, récupérer les 6 variables des numéros et du numéros dreams</p>
+<section id="déroulement-des-opérations" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="déroulement-des-opérations"><span class="header-section-number">3.4.1</span> Déroulement des opérations</h3>
+<ol type="1">
+<li>récupérer les 6 numéros et le numéro dream du tirage 83</li>
+<li>récupérer les nombres de sorties et les écarts de tout ça
+<ol type="1">
+<li>ranger ces données quelque part</li>
+<li>mettre à jour les données (nombres sorties et écarts) suite au tirages 83</li>
+</ol></li>
+<li>retour à 1 pour le tirage 84 et continuer jusqu’au tirage 164</li>
+</ol>
+
+
 </section>
-<section id="catégoriser" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="catégoriser"><span class="header-section-number">3.5</span> Catégoriser</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>nums</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 40 × 7
-      nu    so  so_L  so_J    ec  ec_L  ec_J
-   &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
- 1     1    10     5     5     3     2     1
- 2     2    16     9     7     1    11     0
- 3     3    18    10     8     2     1     2
- 4     4     8     3     5    11     6     5
- 5     5    10     4     6     4     2     4
- 6     6     9     6     3     3    16     1
- 7     7    10     5     5    15     9     7
- 8     8    15     5    10     1     6     0
- 9     9    10     4     6     1     2     0
-10    10    12     6     6     0     0    10
-# ℹ 30 more rows</code></pre>
-</div>
-</div>
-<p>Essai de rank</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sort</span>(<span class="fu">rank</span>(nums<span class="sc">$</span>so))</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1]  1.0  2.0  3.0  4.5  4.5  6.5  6.5 11.5 11.5 11.5 11.5 11.5 11.5 11.5 11.5
-[16] 17.0 17.0 17.0 21.0 21.0 21.0 21.0 21.0 26.0 26.0 26.0 26.0 26.0 29.0 31.5
-[31] 31.5 31.5 31.5 34.5 34.5 36.5 36.5 38.0 39.0 40.0</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(nums<span class="sc">$</span>so)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
- 3  5  7  8  9 10 11 12 13 14 15 16 17 18 19 22 
- 1  1  1  2  2  8  3  5  5  1  4  2  2  1  1  1 </code></pre>
-</div>
-</div>
-<p>Essai de <code>quant.cut()</code></p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(dreams<span class="sc">$</span>so)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-12 15 16 22 
- 1  1  2  1 </code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">quant.cut</span>(dreams<span class="sc">$</span>so,</span>
-<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>                <span class="at">nbclass =</span> <span class="dv">3</span>,</span>
-<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>)</span>
-<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>                ))</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-a b c 
-2 0 3 </code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">quant.cut</span>(nums<span class="sc">$</span>so,</span>
-<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>                <span class="at">nbclass =</span> <span class="dv">20</span>,</span>
-<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">labels =</span> <span class="cn">FALSE</span>))</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
- 1  2  3  4  5  6  8  9 10 11 12 13 14 
- 2  1  2  2  8  3  5  5  1  4  2  3  2 </code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>nums</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 40 × 7
-      nu    so  so_L  so_J    ec  ec_L  ec_J
-   &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
- 1     1    10     5     5     3     2     1
- 2     2    16     9     7     1    11     0
- 3     3    18    10     8     2     1     2
- 4     4     8     3     5    11     6     5
- 5     5    10     4     6     4     2     4
- 6     6     9     6     3     3    16     1
- 7     7    10     5     5    15     9     7
- 8     8    15     5    10     1     6     0
- 9     9    10     4     6     1     2     0
-10    10    12     6     6     0     0    10
-# ℹ 30 more rows</code></pre>
-</div>
-</div>
-<p>donnees &lt;- donnees |&gt; mutate(n1 = b2[,1], .after = bg) |&gt; mutate(n2 = b2[,2], .after = n1) |&gt;</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>nums <span class="ot">&lt;-</span> nums <span class="sc">|&gt;</span> </span>
-<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">soQ =</span> <span class="fu">quant.cut</span>(nums<span class="sc">$</span>so,</span>
-<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">nbclass =</span> <span class="dv">15</span>,</span>
-<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">labels =</span> <span class="cn">FALSE</span>),</span>
-<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">.after =</span> so)</span>
-<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a>nums</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 40 × 8
-      nu    so   soQ  so_L  so_J    ec  ec_L  ec_J
-   &lt;int&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
- 1     1    10     4     5     5     3     2     1
- 2     2    16    10     9     7     1    11     0
- 3     3    18    11    10     8     2     1     2
- 4     4     8     2     3     5    11     6     5
- 5     5    10     4     4     6     4     2     4
- 6     6     9     3     6     3     3    16     1
- 7     7    10     4     5     5    15     9     7
- 8     8    15     9     5    10     1     6     0
- 9     9    10     4     4     6     1     2     0
-10    10    12     6     6     6     0     0    10
-# ℹ 30 more rows</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>nums <span class="ot">&lt;-</span> nums <span class="sc">|&gt;</span> </span>
-<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">soQ =</span> <span class="fu">cut</span>(nums<span class="sc">$</span>so,</span>
-<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">breaks =</span> <span class="dv">5</span>,</span>
-<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">labels =</span> <span class="cn">FALSE</span>),</span>
-<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">.after =</span> so)</span>
-<span id="cb57-6"><a href="#cb57-6" aria-hidden="true" tabindex="-1"></a>nums</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 40 × 8
-      nu    so   soQ  so_L  so_J    ec  ec_L  ec_J
-   &lt;int&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
- 1     1    10     2     5     5     3     2     1
- 2     2    16     4     9     7     1    11     0
- 3     3    18     4    10     8     2     1     2
- 4     4     8     2     3     5    11     6     5
- 5     5    10     2     4     6     4     2     4
- 6     6     9     2     6     3     3    16     1
- 7     7    10     2     5     5    15     9     7
- 8     8    15     4     5    10     1     6     0
- 9     9    10     2     4     6     1     2     0
-10    10    12     3     6     6     0     0    10
-# ℹ 30 more rows</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(nums<span class="sc">$</span>soQ)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
- 1  2  3  4  5 
- 2 13 14  9  2 </code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(nums<span class="sc">$</span>soQ)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="stats1_files/figure-html/unnamed-chunk-36-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>nums<span class="sc">$</span>soQ <span class="ot">&lt;-</span> LETTERS[nums<span class="sc">$</span>soQ]</span>
-<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>nums<span class="sc">$</span>soQ <span class="ot">&lt;-</span> <span class="fu">paste0</span>(nums<span class="sc">$</span>soQ, <span class="st">":ST"</span>)</span>
-<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>nums</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 40 × 8
-      nu    so soQ    so_L  so_J    ec  ec_L  ec_J
-   &lt;int&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
- 1     1    10 B:ST      5     5     3     2     1
- 2     2    16 D:ST      9     7     1    11     0
- 3     3    18 D:ST     10     8     2     1     2
- 4     4     8 B:ST      3     5    11     6     5
- 5     5    10 B:ST      4     6     4     2     4
- 6     6     9 B:ST      6     3     3    16     1
- 7     7    10 B:ST      5     5    15     9     7
- 8     8    15 D:ST      5    10     1     6     0
- 9     9    10 B:ST      4     6     1     2     0
-10    10    12 C:ST      6     6     0     0    10
-# ℹ 30 more rows</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(nums<span class="sc">$</span>soQ)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-A:ST B:ST C:ST D:ST E:ST 
-   2   13   14    9    2 </code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>nums <span class="sc">|&gt;</span> </span>
-<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">count</span>(so) <span class="sc">|&gt;</span></span>
-<span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">prop =</span> <span class="fu">proportions</span>(n) <span class="sc">*</span> <span class="dv">100</span>) <span class="sc">|&gt;</span> <span class="fu">arrange</span>(prop)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 16 × 3
-      so     n  prop
-   &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt;
- 1     3     1   2.5
- 2     5     1   2.5
- 3     7     1   2.5
- 4    14     1   2.5
- 5    18     1   2.5
- 6    19     1   2.5
- 7    22     1   2.5
- 8     8     2   5  
- 9     9     2   5  
-10    16     2   5  
-11    17     2   5  
-12    11     3   7.5
-13    15     4  10  
-14    12     5  12.5
-15    13     5  12.5
-16    10     8  20  </code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(nums<span class="sc">$</span>so) <span class="sc">/</span> <span class="dv">40</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 12.15</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(nums)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>       nu              so            soQ                 so_L      
- Min.   : 1.00   Min.   : 3.00   Length:40          Min.   : 2.00  
- 1st Qu.:10.75   1st Qu.:10.00   Class :character   1st Qu.: 4.75  
- Median :20.50   Median :12.00   Mode  :character   Median : 6.00  
- Mean   :20.50   Mean   :12.15                      Mean   : 6.15  
- 3rd Qu.:30.25   3rd Qu.:15.00                      3rd Qu.: 7.25  
- Max.   :40.00   Max.   :22.00                      Max.   :12.00  
-      so_J          ec              ec_L            ec_J      
- Min.   : 1   Min.   : 0.000   Min.   : 0.00   Min.   : 0.00  
- 1st Qu.: 4   1st Qu.: 1.000   1st Qu.: 1.75   1st Qu.: 1.00  
- Median : 6   Median : 3.000   Median : 4.50   Median : 3.00  
- Mean   : 6   Mean   : 6.275   Mean   : 5.75   Mean   : 5.85  
- 3rd Qu.: 8   3rd Qu.: 9.250   3rd Qu.: 9.00   3rd Qu.: 9.00  
- Max.   :11   Max.   :35.000   Max.   :23.00   Max.   :35.00  </code></pre>
-</div>
-</div>
-
-
 </section>
 
 
@@ -1540,6 +1270,19 @@ A:ST B:ST C:ST D:ST E:ST
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Créé grâce à mon Mac, <a href="https://posit.co/download/rstudio-desktop/">RStudio</a>, <a href="https://www.r-project.org/">R</a> et, surtout <a href="https://quarto.org/">quarto</a>.</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 

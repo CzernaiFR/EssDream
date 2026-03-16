@@ -15,6 +15,9 @@ book:
     - intro.qmd
     - stats1.qmd
     - references.qmd
+  page-footer: "Créé grâce à mon Mac, 
+  [RStudio](https://posit.co/download/rstudio-desktop/), 
+  [R](https://www.r-project.org/) et, surtout [quarto](https://quarto.org/)."
 
 bibliography: references.bib
 
