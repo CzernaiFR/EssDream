@@ -383,7 +383,8 @@ window.Quarto = {
   <li><a href="#premiers-calculs" id="toc-premiers-calculs" class="nav-link" data-scroll-target="#premiers-calculs"><span class="header-section-number">3.3</span> Premiers calculs</a></li>
   <li><a href="#compter-les-boules" id="toc-compter-les-boules" class="nav-link" data-scroll-target="#compter-les-boules"><span class="header-section-number">3.4</span> Compter les boules</a>
   <ul class="collapse">
-  <li><a href="#déroulement-des-opérations" id="toc-déroulement-des-opérations" class="nav-link" data-scroll-target="#déroulement-des-opérations"><span class="header-section-number">3.4.1</span> Déroulement des opérations</a></li>
+  <li><a href="#procédure" id="toc-procédure" class="nav-link" data-scroll-target="#procédure"><span class="header-section-number">3.4.1</span> Procédure</a></li>
+  <li><a href="#déroulement-des-opérations" id="toc-déroulement-des-opérations" class="nav-link" data-scroll-target="#déroulement-des-opérations"><span class="header-section-number">3.4.2</span> Déroulement des opérations</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -418,7 +419,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Modifié</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">10 mars 2026</p>
+      <p class="date-modified">14 mars 2026</p>
     </div>
   </div>
     
@@ -477,7 +478,7 @@ window.Quarto = {
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>New names:
-Rows: 245 Columns: 35
+Rows: 246 Columns: 35
 ── Column specification
 ──────────────────────────────────────────────────────── Delimiter: ";" chr
 (5): jour_de_tirage, date_de_tirage, date_de_forclusion, boules_gagnant... dbl
@@ -495,12 +496,12 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 <pre><code># A tibble: 6 × 4
   jour_de_tirage date_de_tirage boules_gagnantes_en_ordre_croissant numero_dream
   &lt;chr&gt;          &lt;chr&gt;          &lt;chr&gt;                                      &lt;dbl&gt;
-1 LUNDI          09/03/2026     -5-14-32-34-35-37-                             3
-2 JEUDI          05/03/2026     -6-18-22-32-37-38-                             4
-3 LUNDI          02/03/2026     -1-8-11-14-18-35-                              3
-4 JEUDI          26/02/2026     -17-18-19-21-23-36-                            4
-5 LUNDI          23/02/2026     -1-7-12-25-26-39-                              1
-6 JEUDI          19/02/2026     -8-10-13-36-37-38-                             4</code></pre>
+1 JEUDI          12/03/2026     -2-9-20-23-35-36-                              4
+2 LUNDI          09/03/2026     -5-14-32-34-35-37-                             3
+3 JEUDI          05/03/2026     -6-18-22-32-37-38-                             4
+4 LUNDI          02/03/2026     -1-8-11-14-18-35-                              3
+5 JEUDI          26/02/2026     -17-18-19-21-23-36-                            4
+6 LUNDI          23/02/2026     -1-7-12-25-26-39-                              1</code></pre>
 </div>
 </div>
 <p>À noter que les tirages sont classés en ordre descendant, les plus récents d’abord. Encore un peu de nettoyage s’impose. Abréger les noms.</p>
@@ -520,12 +521,12 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 <pre><code># A tibble: 6 × 4
   jt    dt         bg                     nd
   &lt;chr&gt; &lt;chr&gt;      &lt;chr&gt;               &lt;dbl&gt;
-1 L     09/03/2026 -5-14-32-34-35-37-      3
-2 J     05/03/2026 -6-18-22-32-37-38-      4
-3 L     02/03/2026 -1-8-11-14-18-35-       3
-4 J     26/02/2026 -17-18-19-21-23-36-     4
-5 L     23/02/2026 -1-7-12-25-26-39-       1
-6 J     19/02/2026 -8-10-13-36-37-38-      4</code></pre>
+1 J     12/03/2026 -2-9-20-23-35-36-       4
+2 L     09/03/2026 -5-14-32-34-35-37-      3
+3 J     05/03/2026 -6-18-22-32-37-38-      4
+4 L     02/03/2026 -1-8-11-14-18-35-       3
+5 J     26/02/2026 -17-18-19-21-23-36-     4
+6 L     23/02/2026 -1-7-12-25-26-39-       1</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -546,12 +547,12 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 <span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(b2)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3] [,4] [,5] [,6]
-[1,]    5   14   32   34   35   37
-[2,]    6   18   22   32   37   38
-[3,]    1    8   11   14   18   35
-[4,]   17   18   19   21   23   36
-[5,]    1    7   12   25   26   39
-[6,]    8   10   13   36   37   38</code></pre>
+[1,]    2    9   20   23   35   36
+[2,]    5   14   32   34   35   37
+[3,]    6   18   22   32   37   38
+[4,]    1    8   11   14   18   35
+[5,]   17   18   19   21   23   36
+[6,]    1    7   12   25   26   39</code></pre>
 </div>
 </div>
 <p>Affecter chaque colonnes de la matrice à une colonne du <code>tibble()</code></p>
@@ -594,20 +595,20 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(donnees)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> jt            dt                   n1               n2              n3       
- L:123   Min.   :2023-11-06   Min.   : 1.000   Min.   : 2.00   Min.   : 3.00  
- J:122   1st Qu.:2024-06-06   1st Qu.: 2.000   1st Qu.: 7.00   1st Qu.:13.00  
-         Median :2025-01-06   Median : 4.000   Median :11.00   Median :18.00  
-         Mean   :2025-01-05   Mean   : 5.865   Mean   :11.93   Mean   :17.75  
-         3rd Qu.:2025-08-07   3rd Qu.: 8.000   3rd Qu.:16.00   3rd Qu.:22.00  
-         Max.   :2026-03-09   Max.   :18.000   Max.   :31.00   Max.   :33.00  
-       n4              n5              n6             nd       
- Min.   : 6.00   Min.   :10.00   Min.   :16.0   Min.   :1.000  
- 1st Qu.:20.00   1st Qu.:25.00   1st Qu.:32.0   1st Qu.:2.000  
- Median :23.00   Median :30.00   Median :37.0   Median :3.000  
- Mean   :23.37   Mean   :29.29   Mean   :34.9   Mean   :2.906  
- 3rd Qu.:28.00   3rd Qu.:34.00   3rd Qu.:39.0   3rd Qu.:4.000  
- Max.   :37.00   Max.   :39.00   Max.   :40.0   Max.   :5.000  </code></pre>
+<pre><code> jt            dt                   n1              n2              n3       
+ L:123   Min.   :2023-11-06   Min.   : 1.00   Min.   : 2.00   Min.   : 3.00  
+ J:123   1st Qu.:2024-06-07   1st Qu.: 2.00   1st Qu.: 7.00   1st Qu.:13.00  
+         Median :2025-01-07   Median : 4.00   Median :11.00   Median :18.00  
+         Mean   :2025-01-07   Mean   : 5.85   Mean   :11.92   Mean   :17.76  
+         3rd Qu.:2025-08-10   3rd Qu.: 8.00   3rd Qu.:16.00   3rd Qu.:22.00  
+         Max.   :2026-03-12   Max.   :18.00   Max.   :31.00   Max.   :33.00  
+       n4              n5              n6              nd       
+ Min.   : 6.00   Min.   :10.00   Min.   :16.00   Min.   :1.000  
+ 1st Qu.:20.00   1st Qu.:25.00   1st Qu.:32.00   1st Qu.:2.000  
+ Median :23.00   Median :30.00   Median :36.50   Median :3.000  
+ Mean   :23.37   Mean   :29.31   Mean   :34.91   Mean   :2.911  
+ 3rd Qu.:28.00   3rd Qu.:34.00   3rd Qu.:39.00   3rd Qu.:4.000  
+ Max.   :37.00   Max.   :39.00   Max.   :40.00   Max.   :5.000  </code></pre>
 </div>
 </div>
 <div class="cell">
@@ -825,9 +826,38 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 <section id="compter-les-boules" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="compter-les-boules"><span class="header-section-number">3.4</span> Compter les boules</h2>
 <p>Enfin, presque… Là, on a 6 variables pour chaque numéro de 1 à 40 et chaque numéro dream de 1 à 5 pour les 82 premières lignes.</p>
-<p>Maintenant il faut récupérer les numéros et le numéro <code>dream</code> de la ligne 83, récupérer les 6 variables des numéros et du numéros dreams</p>
-<section id="déroulement-des-opérations" class="level3" data-number="3.4.1">
-<h3 data-number="3.4.1" class="anchored" data-anchor-id="déroulement-des-opérations"><span class="header-section-number">3.4.1</span> Déroulement des opérations</h3>
+<section id="procédure" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="procédure"><span class="header-section-number">3.4.1</span> Procédure</h3>
+<p>Se baser uniquement sur les numéros sortis me parait inutile. Tout aussi inutile que se baser sur le nombre de sorties ou l’écart auquel est sorti un numéro. Ces données changent à chaque tirage.</p>
+<p>On va classer ces données ; <span class="math inline">\(R\)</span> dispose de beaucoup (trop) de routines de classement. J’ai choisi <code>rank()</code> en version de base (<code>average</code>) qui permet de tenir compte des égalités. Exemple :</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">8</span>, <span class="dv">7</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">10</span>, <span class="dv">25</span>)</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(a) <span class="ot">&lt;-</span> a</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">rank</span>(a)</span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>(<span class="fu">sort</span>(b))</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  3   5   5   5   7   8  10  10  25 
+1.0 3.0 3.0 3.0 5.0 6.0 7.5 7.5 9.0 </code></pre>
+</div>
+</div>
+<p>Le plus petit <span class="math inline">\(3\)</span> est classé <span class="math inline">\(1\)</span>, les trois <span class="math inline">\(5\)</span> qui suivent prennent la place <span class="math inline">\(3\)</span> pour la moyenne de <span class="math inline">\(2\)</span>, <span class="math inline">\(3\)</span> et <span class="math inline">\(4\)</span> (average == moyenne) <span class="math inline">\(7\)</span> et <span class="math inline">\(8\)</span> sont <span class="math inline">\(5\)</span> et <span class="math inline">\(6\)</span>, les deux <span class="math inline">\(10\)</span> sont classés <span class="math inline">\(7.5\)</span> (moyenne de <span class="math inline">\(7\)</span> et <span class="math inline">\(6\)</span>) et le <span class="math inline">\(25\)</span> est en <span class="math inline">\(9\)</span>.</p>
+<p>Le <code>percent_rank()</code> peut aussi être intéressant.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">8</span>, <span class="dv">7</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">10</span>, <span class="dv">25</span>)</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">percent_rank</span>(a)</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">round</span>(b <span class="sc">*</span> <span class="dv">1000</span>)</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(b) <span class="ot">&lt;-</span> a</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>(<span class="fu">sort</span>(b))</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   3    5    5    5    7    8   10   10   25 
+   0  125  125  125  500  625  750  750 1000 </code></pre>
+</div>
+</div>
+<p>Il classe les données sur une échelle de <span class="math inline">\(0\)</span> à <span class="math inline">\(1\)</span> et, en multipliant par <span class="math inline">\(1000\)</span>, on obtient une série.</p>
+<p>L’avantage est de ne pas avoir une suite de <span class="math inline">\(0\)</span> à <span class="math inline">\(x\)</span>, et la différence entre les occurences est clairement marquée.</p>
+</section>
+<section id="déroulement-des-opérations" class="level3" data-number="3.4.2">
+<h3 data-number="3.4.2" class="anchored" data-anchor-id="déroulement-des-opérations"><span class="header-section-number">3.4.2</span> Déroulement des opérations</h3>
 <ol type="1">
 <li>récupérer les 6 numéros et le numéro dream du tirage 83</li>
 <li>récupérer les nombres de sorties et les écarts de tout ça
