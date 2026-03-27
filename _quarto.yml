@@ -27,16 +27,8 @@ citation-location: margin
 format:
   html:
     date-modified: last-modified
-    theme:
-      dark: superhero
-      light: flatly
-    fontsize: 15px
-      
-  pdf:
-    documentclass: scrreprt
-    fontsize: 15pt
-    
-  docx: default
-
-
+    theme: superhero
+    fontsize: 20px
+    mermaid:
+      theme: "dark"
 

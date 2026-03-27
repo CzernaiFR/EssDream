@@ -8,7 +8,7 @@
 
 <meta name="author" content="Roger MARTIN">
 
-<title>3&nbsp; Analyse – Essai de statistiques pour EuroDreams</title>
+<title>2&nbsp; Analyse – Essai de statistiques pour EuroDreams</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -75,12 +75,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0d503da3bebc1968eccdc0549f16ce00.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-9a7e9a0502fd0eaca66e5ca99ce45802.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-26e867f70c219830cc6fa0af307f7724.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -141,167 +139,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-sidebar floating slimcontent quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
-    const toggleBodyColorMode = (bsSheetEl) => {
-      const mode = bsSheetEl.getAttribute("data-mode");
-      const bodyEl = window.document.querySelector("body");
-      if (mode === "dark") {
-        bodyEl.classList.add("quarto-dark");
-        bodyEl.classList.remove("quarto-light");
-      } else {
-        bodyEl.classList.add("quarto-light");
-        bodyEl.classList.remove("quarto-dark");
-      }
-    }
-    const toggleBodyColorPrimary = () => {
-      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
-      if (bsSheetEl) {
-        toggleBodyColorMode(bsSheetEl);
-      }
-    }
-    const setColorSchemeToggle = (alternate) => {
-      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-      for (let i=0; i < toggles.length; i++) {
-        const toggle = toggles[i];
-        if (toggle) {
-          if (alternate) {
-            toggle.classList.add("alternate");
-          } else {
-            toggle.classList.remove("alternate");
-          }
-        }
-      }
-    };
-    const toggleColorMode = (alternate) => {
-      // Switch the stylesheets
-      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
-      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-      manageTransitions('#quarto-margin-sidebar .nav-link', false);
-      if (alternate) {
-        // note: dark is layered on light, we don't disable primary!
-        enableStylesheet(alternateStylesheets);
-        for (const sheetNode of alternateStylesheets) {
-          if (sheetNode.id === "quarto-bootstrap") {
-            toggleBodyColorMode(sheetNode);
-          }
-        }
-      } else {
-        disableStylesheet(alternateStylesheets);
-        enableStylesheet(primaryStylesheets)
-        toggleBodyColorPrimary();
-      }
-      manageTransitions('#quarto-margin-sidebar .nav-link', true);
-      // Switch the toggles
-      setColorSchemeToggle(alternate)
-      // Hack to workaround the fact that safari doesn't
-      // properly recolor the scrollbar when toggling (#1455)
-      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-        manageTransitions("body", false);
-        window.scrollTo(0, 1);
-        setTimeout(() => {
-          window.scrollTo(0, 0);
-          manageTransitions("body", true);
-        }, 40);
-      }
-    }
-    const disableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        stylesheet.rel = 'disabled-stylesheet';
-      }
-    }
-    const enableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
-          stylesheet.rel = 'stylesheet';
-        }
-      }
-    }
-    const manageTransitions = (selector, allowTransitions) => {
-      const els = window.document.querySelectorAll(selector);
-      for (let i=0; i < els.length; i++) {
-        const el = els[i];
-        if (allowTransitions) {
-          el.classList.remove('notransition');
-        } else {
-          el.classList.add('notransition');
-        }
-      }
-    }
-    const isFileUrl = () => {
-      return window.location.protocol === 'file:';
-    }
-    const hasAlternateSentinel = () => {
-      let styleSentinel = getColorSchemeSentinel();
-      if (styleSentinel !== null) {
-        return styleSentinel === "alternate";
-      } else {
-        return false;
-      }
-    }
-    const setStyleSentinel = (alternate) => {
-      const value = alternate ? "alternate" : "default";
-      if (!isFileUrl()) {
-        window.localStorage.setItem("quarto-color-scheme", value);
-      } else {
-        localAlternateSentinel = value;
-      }
-    }
-    const getColorSchemeSentinel = () => {
-      if (!isFileUrl()) {
-        const storageValue = window.localStorage.getItem("quarto-color-scheme");
-        return storageValue != null ? storageValue : localAlternateSentinel;
-      } else {
-        return localAlternateSentinel;
-      }
-    }
-    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-      let newTheme = '';
-      if(authorPrefersDark) {
-        newTheme = isAlternate ? baseTheme : alternateTheme;
-      } else {
-        newTheme = isAlternate ? alternateTheme : baseTheme;
-      }
-      const changeGiscusTheme = () => {
-        // From: https://github.com/giscus/giscus/issues/336
-        const sendMessage = (message) => {
-          const iframe = document.querySelector('iframe.giscus-frame');
-          if (!iframe) return;
-          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-        }
-        sendMessage({
-          setConfig: {
-            theme: newTheme
-          }
-        });
-      }
-      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-      if (isGiscussLoaded) {
-        changeGiscusTheme();
-      }
-    };
-    const authorPrefersDark = true;
-    const darkModeDefault = authorPrefersDark;
-    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-    // Dark / light mode switch
-    window.quartoToggleColorScheme = () => {
-      // Read the current dark / light value
-      let toAlternate = !hasAlternateSentinel();
-      toggleColorMode(toAlternate);
-      setStyleSentinel(toAlternate);
-      toggleGiscusIfUsed(toAlternate, darkModeDefault);
-      window.dispatchEvent(new Event('resize'));
-    };
-    // Switch to dark mode if need be
-    if (hasAlternateSentinel()) {
-      toggleColorMode(true);
-    } else {
-      toggleColorMode(false);
-    }
-  </script>
+<body class="nav-sidebar floating slimcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -310,7 +148,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./stats1.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Analyse</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./stats1.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Analyse</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
@@ -326,9 +164,6 @@ window.Quarto = {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Essai de statistiques pour EuroDreams</a> 
-        <div class="sidebar-tools-main">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre"><i class="bi"></i></a>
-</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -341,19 +176,19 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">index.html</span></span></a>
+ <span class="menu-text">En guise de préface</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./stats1.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Analyse</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Analyse</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -372,19 +207,19 @@ window.Quarto = {
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#récupérer-lhistorique-des-tirages" id="toc-récupérer-lhistorique-des-tirages" class="nav-link active" data-scroll-target="#récupérer-lhistorique-des-tirages"><span class="header-section-number">3.1</span> Récupérer l’historique des tirages</a>
+  <li><a href="#récupérer-lhistorique-des-tirages" id="toc-récupérer-lhistorique-des-tirages" class="nav-link active" data-scroll-target="#récupérer-lhistorique-des-tirages"><span class="header-section-number">2.1</span> Récupérer l’historique des tirages</a>
   <ul class="collapse">
-  <li><a href="#faire-le-ménage" id="toc-faire-le-ménage" class="nav-link" data-scroll-target="#faire-le-ménage"><span class="header-section-number">3.1.1</span> Faire le ménage</a></li>
+  <li><a href="#faire-le-ménage" id="toc-faire-le-ménage" class="nav-link" data-scroll-target="#faire-le-ménage"><span class="header-section-number">2.1.1</span> Faire le ménage</a></li>
   </ul></li>
-  <li><a href="#fonctions" id="toc-fonctions" class="nav-link" data-scroll-target="#fonctions"><span class="header-section-number">3.2</span> Fonctions</a>
+  <li><a href="#fonctions" id="toc-fonctions" class="nav-link" data-scroll-target="#fonctions"><span class="header-section-number">2.2</span> Fonctions</a>
   <ul class="collapse">
-  <li><a href="#récupérer-les-données" id="toc-récupérer-les-données" class="nav-link" data-scroll-target="#récupérer-les-données"><span class="header-section-number">3.2.1</span> Récupérer les données</a></li>
+  <li><a href="#récupérer-les-données" id="toc-récupérer-les-données" class="nav-link" data-scroll-target="#récupérer-les-données"><span class="header-section-number">2.2.1</span> Récupérer les données</a></li>
   </ul></li>
-  <li><a href="#premiers-calculs" id="toc-premiers-calculs" class="nav-link" data-scroll-target="#premiers-calculs"><span class="header-section-number">3.3</span> Premiers calculs</a></li>
-  <li><a href="#compter-les-boules" id="toc-compter-les-boules" class="nav-link" data-scroll-target="#compter-les-boules"><span class="header-section-number">3.4</span> Compter les boules</a>
+  <li><a href="#premiers-calculs" id="toc-premiers-calculs" class="nav-link" data-scroll-target="#premiers-calculs"><span class="header-section-number">2.3</span> Premiers calculs</a></li>
+  <li><a href="#compter-les-boules" id="toc-compter-les-boules" class="nav-link" data-scroll-target="#compter-les-boules"><span class="header-section-number">2.4</span> Compter les boules</a>
   <ul class="collapse">
-  <li><a href="#procédure" id="toc-procédure" class="nav-link" data-scroll-target="#procédure"><span class="header-section-number">3.4.1</span> Procédure</a></li>
-  <li><a href="#déroulement-des-opérations" id="toc-déroulement-des-opérations" class="nav-link" data-scroll-target="#déroulement-des-opérations"><span class="header-section-number">3.4.2</span> Déroulement des opérations</a></li>
+  <li><a href="#procédure" id="toc-procédure" class="nav-link" data-scroll-target="#procédure"><span class="header-section-number">2.4.1</span> Procédure</a></li>
+  <li><a href="#déroulement-des-opérations" id="toc-déroulement-des-opérations" class="nav-link" data-scroll-target="#déroulement-des-opérations"><span class="header-section-number">2.4.2</span> Déroulement des opérations</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -392,10 +227,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
 
-
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Analyse</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Analyse</span></h1>
 </div>
 
 
@@ -419,7 +253,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Modifié</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">14 mars 2026</p>
+      <p class="date-modified">27 mars 2026</p>
     </div>
   </div>
     
@@ -441,8 +275,8 @@ window.Quarto = {
 <p>La FDJ met à disposition des joueurs<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> les résultats de <strong>TOUS</strong> ses jeux.</p>
 <div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;et de tout le monde, d’ailleurs</p></div></div><p>Les résultats des <a href="https://www.sto.api.fdj.fr/anonymous/service-draw-info/v3/documentations/1a2b3c4d-9876-4562-b3fc-2c963f66afa5">tirages EuroDreams</a> sont disponibles sous forme d’un fichier zippé. En cliquant sur le lien ci-dessus, on télécharge un fichier zippé dans le répertoire courant de l’ordinateur hôte.</p>
 <p>Comme je suis paresseux, je demande a <span class="math inline">\(R\)</span> de le faire…</p>
-<section id="récupérer-lhistorique-des-tirages" class="level2 page-columns page-full" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="récupérer-lhistorique-des-tirages"><span class="header-section-number">3.1</span> Récupérer l’historique des tirages</h2>
+<section id="récupérer-lhistorique-des-tirages" class="level2 page-columns page-full" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="récupérer-lhistorique-des-tirages"><span class="header-section-number">2.1</span> Récupérer l’historique des tirages</h2>
 <p>On commence par affecter l’adresse du fichier à une variable, puis on invoque <code>dowload.file()</code> pour récupérer le <code>zip</code> et <code>unzip()</code> pour dézipper.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># URL du fichiers de données des tirages sur le site FDJ</span></span>
@@ -453,8 +287,8 @@ window.Quarto = {
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">unzip</span>(<span class="st">"donnees.zip"</span>, <span class="at">exdir =</span> <span class="st">"donnees"</span>, <span class="at">overwrite =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Une fois dézippé, c’est un fichier <code>.csv</code><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> qui contient <span class="math inline">\(32\)</span> colonnes, dont la grande majorité sont inutiles pour les statistiques (nombre de gagnants, montants des gains et autres joyeusetés inutiles).</p>
-<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;<a href="https://fr.wikipedia.org/wiki/Comma-separated_values">ce qu’est un fichier <code>.csv</code></a></p></div></div><section id="faire-le-ménage" class="level3" data-number="3.1.1">
-<h3 data-number="3.1.1" class="anchored" data-anchor-id="faire-le-ménage"><span class="header-section-number">3.1.1</span> Faire le ménage</h3>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;<a href="https://fr.wikipedia.org/wiki/Comma-separated_values">ce qu’est un fichier <code>.csv</code></a></p></div></div><section id="faire-le-ménage" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="faire-le-ménage"><span class="header-section-number">2.1.1</span> Faire le ménage</h3>
 <p>Il n’y a que <span class="math inline">\(4\)</span> colonnes intéressantes, voire nécessaires&nbsp;;</p>
 <ul>
 <li>jour du tirage LUNDI ou JEUDI</li>
@@ -470,7 +304,7 @@ window.Quarto = {
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="st">"numero_dream"</span>)</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Met le fichier dans un tibble</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>donnees <span class="ot">&lt;-</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>donnees <span class="ot">&lt;-</span> </span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">read_csv2</span>(<span class="st">"donnees/eurodreams_202311.csv"</span>) <span class="sc">|&gt;</span> </span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">select</span>(<span class="fu">all_of</span>(noms))</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
@@ -478,7 +312,7 @@ window.Quarto = {
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>New names:
-Rows: 246 Columns: 35
+Rows: 250 Columns: 35
 ── Column specification
 ──────────────────────────────────────────────────────── Delimiter: ";" chr
 (5): jour_de_tirage, date_de_tirage, date_de_forclusion, boules_gagnant... dbl
@@ -496,12 +330,12 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 <pre><code># A tibble: 6 × 4
   jour_de_tirage date_de_tirage boules_gagnantes_en_ordre_croissant numero_dream
   &lt;chr&gt;          &lt;chr&gt;          &lt;chr&gt;                                      &lt;dbl&gt;
-1 JEUDI          12/03/2026     -2-9-20-23-35-36-                              4
-2 LUNDI          09/03/2026     -5-14-32-34-35-37-                             3
-3 JEUDI          05/03/2026     -6-18-22-32-37-38-                             4
-4 LUNDI          02/03/2026     -1-8-11-14-18-35-                              3
-5 JEUDI          26/02/2026     -17-18-19-21-23-36-                            4
-6 LUNDI          23/02/2026     -1-7-12-25-26-39-                              1</code></pre>
+1 JEUDI          26/03/2026     -11-14-30-32-34-39-                            5
+2 LUNDI          23/03/2026     -1-4-6-13-16-28-                               5
+3 JEUDI          19/03/2026     -5-8-15-28-33-34-                              3
+4 LUNDI          16/03/2026     -2-5-24-29-32-39-                              3
+5 JEUDI          12/03/2026     -2-9-20-23-35-36-                              4
+6 LUNDI          09/03/2026     -5-14-32-34-35-37-                             3</code></pre>
 </div>
 </div>
 <p>À noter que les tirages sont classés en ordre descendant, les plus récents d’abord. Encore un peu de nettoyage s’impose. Abréger les noms.</p>
@@ -521,12 +355,12 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 <pre><code># A tibble: 6 × 4
   jt    dt         bg                     nd
   &lt;chr&gt; &lt;chr&gt;      &lt;chr&gt;               &lt;dbl&gt;
-1 J     12/03/2026 -2-9-20-23-35-36-       4
-2 L     09/03/2026 -5-14-32-34-35-37-      3
-3 J     05/03/2026 -6-18-22-32-37-38-      4
-4 L     02/03/2026 -1-8-11-14-18-35-       3
-5 J     26/02/2026 -17-18-19-21-23-36-     4
-6 L     23/02/2026 -1-7-12-25-26-39-       1</code></pre>
+1 J     26/03/2026 -11-14-30-32-34-39-     5
+2 L     23/03/2026 -1-4-6-13-16-28-        5
+3 J     19/03/2026 -5-8-15-28-33-34-       3
+4 L     16/03/2026 -2-5-24-29-32-39-       3
+5 J     12/03/2026 -2-9-20-23-35-36-       4
+6 L     09/03/2026 -5-14-32-34-35-37-      3</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -547,12 +381,12 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 <span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(b2)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3] [,4] [,5] [,6]
-[1,]    2    9   20   23   35   36
-[2,]    5   14   32   34   35   37
-[3,]    6   18   22   32   37   38
-[4,]    1    8   11   14   18   35
-[5,]   17   18   19   21   23   36
-[6,]    1    7   12   25   26   39</code></pre>
+[1,]   11   14   30   32   34   39
+[2,]    1    4    6   13   16   28
+[3,]    5    8   15   28   33   34
+[4,]    2    5   24   29   32   39
+[5,]    2    9   20   23   35   36
+[6,]    5   14   32   34   35   37</code></pre>
 </div>
 </div>
 <p>Affecter chaque colonnes de la matrice à une colonne du <code>tibble()</code></p>
@@ -595,20 +429,20 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(donnees)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> jt            dt                   n1              n2              n3       
- L:123   Min.   :2023-11-06   Min.   : 1.00   Min.   : 2.00   Min.   : 3.00  
- J:123   1st Qu.:2024-06-07   1st Qu.: 2.00   1st Qu.: 7.00   1st Qu.:13.00  
-         Median :2025-01-07   Median : 4.00   Median :11.00   Median :18.00  
-         Mean   :2025-01-07   Mean   : 5.85   Mean   :11.92   Mean   :17.76  
-         3rd Qu.:2025-08-10   3rd Qu.: 8.00   3rd Qu.:16.00   3rd Qu.:22.00  
-         Max.   :2026-03-12   Max.   :18.00   Max.   :31.00   Max.   :33.00  
-       n4              n5              n6              nd       
- Min.   : 6.00   Min.   :10.00   Min.   :16.00   Min.   :1.000  
- 1st Qu.:20.00   1st Qu.:25.00   1st Qu.:32.00   1st Qu.:2.000  
- Median :23.00   Median :30.00   Median :36.50   Median :3.000  
- Mean   :23.37   Mean   :29.31   Mean   :34.91   Mean   :2.911  
- 3rd Qu.:28.00   3rd Qu.:34.00   3rd Qu.:39.00   3rd Qu.:4.000  
- Max.   :37.00   Max.   :39.00   Max.   :40.00   Max.   :5.000  </code></pre>
+<pre><code> jt            dt                   n1               n2              n3       
+ L:125   Min.   :2023-11-06   Min.   : 1.000   Min.   : 2.00   Min.   : 3.00  
+ J:125   1st Qu.:2024-06-10   1st Qu.: 2.000   1st Qu.: 7.00   1st Qu.:13.00  
+         Median :2025-01-14   Median : 4.000   Median :11.00   Median :18.00  
+         Mean   :2025-01-14   Mean   : 5.832   Mean   :11.85   Mean   :17.77  
+         3rd Qu.:2025-08-20   3rd Qu.: 8.000   3rd Qu.:15.75   3rd Qu.:22.00  
+         Max.   :2026-03-26   Max.   :18.000   Max.   :31.00   Max.   :33.00  
+       n4             n5             n6              nd       
+ Min.   : 6.0   Min.   :10.0   Min.   :16.00   Min.   :1.000  
+ 1st Qu.:20.0   1st Qu.:25.0   1st Qu.:32.00   1st Qu.:2.000  
+ Median :23.0   Median :30.0   Median :36.50   Median :3.000  
+ Mean   :23.4   Mean   :29.3   Mean   :34.91   Mean   :2.928  
+ 3rd Qu.:28.0   3rd Qu.:34.0   3rd Qu.:39.00   3rd Qu.:4.000  
+ Max.   :37.0   Max.   :39.0   Max.   :40.00   Max.   :5.000  </code></pre>
 </div>
 </div>
 <div class="cell">
@@ -617,10 +451,10 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 </div>
 </section>
 </section>
-<section id="fonctions" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="fonctions"><span class="header-section-number">3.2</span> Fonctions</h2>
-<section id="récupérer-les-données" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="récupérer-les-données"><span class="header-section-number">3.2.1</span> Récupérer les données</h3>
+<section id="fonctions" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="fonctions"><span class="header-section-number">2.2</span> Fonctions</h2>
+<section id="récupérer-les-données" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="récupérer-les-données"><span class="header-section-number">2.2.1</span> Récupérer les données</h3>
 <p>Les 3 fonctions ci-dessous permettent de récupérer des éléments dans le jeu de données <code>donnees</code>.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>recup_n1_n6 <span class="ot">&lt;-</span>    <span class="co"># récupère les 6 numéros</span></span>
@@ -716,8 +550,8 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 </div>
 </section>
 </section>
-<section id="premiers-calculs" class="level2 page-columns page-full" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="premiers-calculs"><span class="header-section-number">3.3</span> Premiers calculs</h2>
+<section id="premiers-calculs" class="level2 page-columns page-full" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="premiers-calculs"><span class="header-section-number">2.3</span> Premiers calculs</h2>
 <p>On va prendre le tiers pour les données initiales.</p>
 <p>Remplir les colonnes des <code>nums</code> et <code>dream</code>. Et commencer à créer des données. Récupérer le nombre de tirages et en retenir <span class="math inline">\(\frac{1}{3}\)</span>.</p>
 <div class="cell">
@@ -726,10 +560,10 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>nbre_lignes</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 82</code></pre>
+<pre><code>[1] 83</code></pre>
 </div>
 </div>
-<p>Puis, itérer sur les 82 premières lignes de <code>donnees</code>.</p>
+<p>Puis, itérer sur les 83 premières lignes de <code>donnees</code>.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>nbre_lignes) {</span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>  j <span class="ot">&lt;-</span> <span class="fu">recup_jt</span>(i)      <span class="co">#</span></span>
@@ -790,44 +624,44 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 <pre><code># A tibble: 40 × 7
       nu    so  so_L  so_J    ec  ec_L  ec_J
    &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
- 1     1    10     5     5     4     2     2
- 2     2    16     9     7     2    11     1
- 3     3    18    10     8     3     1     3
- 4     4     8     3     5    12     6     6
- 5     5    10     4     6     5     2     5
- 6     6    10     6     4     0    16     0
- 7     7    10     5     5    16     9     8
- 8     8    15     5    10     2     6     1
- 9     9    10     4     6     2     2     1
-10    10    12     6     6     1     0    11
+ 1     1    10     5     5     5     3     2
+ 2     2    16     9     7     3    12     1
+ 3     3    18    10     8     4     2     3
+ 4     4     8     3     5    13     7     6
+ 5     5    10     4     6     6     3     5
+ 6     6    11     7     4     0     0     0
+ 7     7    10     5     5    17    10     8
+ 8     8    15     5    10     3     7     1
+ 9     9    10     4     6     3     3     1
+10    10    12     6     6     2     1    11
 # ℹ 30 more rows</code></pre>
 </div>
 </div>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(nums)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>       nu              so            so_L            so_J      
- Min.   : 1.00   Min.   : 4.0   Min.   : 2.00   Min.   : 2.00  
- 1st Qu.:10.75   1st Qu.:10.0   1st Qu.: 4.75   1st Qu.: 5.00  
- Median :20.50   Median :12.0   Median : 6.00   Median : 6.00  
- Mean   :20.50   Mean   :12.3   Mean   : 6.15   Mean   : 6.15  
- 3rd Qu.:30.25   3rd Qu.:15.0   3rd Qu.: 7.25   3rd Qu.: 8.00  
- Max.   :40.00   Max.   :22.0   Max.   :12.00   Max.   :11.00  
-       ec              ec_L            ec_J       
- Min.   : 0.000   Min.   : 0.00   Min.   : 0.000  
- 1st Qu.: 1.000   1st Qu.: 1.75   1st Qu.: 1.000  
- Median : 3.500   Median : 4.50   Median : 3.000  
- Mean   : 6.125   Mean   : 5.75   Mean   : 6.125  
- 3rd Qu.: 7.500   3rd Qu.: 9.00   3rd Qu.: 8.500  
- Max.   :36.000   Max.   :23.00   Max.   :36.000  </code></pre>
+<pre><code>       nu              so             so_L           so_J      
+ Min.   : 1.00   Min.   : 4.00   Min.   : 2.0   Min.   : 2.00  
+ 1st Qu.:10.75   1st Qu.:10.00   1st Qu.: 5.0   1st Qu.: 5.00  
+ Median :20.50   Median :12.00   Median : 6.0   Median : 6.00  
+ Mean   :20.50   Mean   :12.45   Mean   : 6.3   Mean   : 6.15  
+ 3rd Qu.:30.25   3rd Qu.:15.00   3rd Qu.: 8.0   3rd Qu.: 8.00  
+ Max.   :40.00   Max.   :22.00   Max.   :12.0   Max.   :11.00  
+       ec              ec_L             ec_J       
+ Min.   : 0.000   Min.   : 0.000   Min.   : 0.000  
+ 1st Qu.: 1.750   1st Qu.: 1.000   1st Qu.: 1.000  
+ Median : 4.000   Median : 4.000   Median : 3.000  
+ Mean   : 6.475   Mean   : 5.275   Mean   : 6.125  
+ 3rd Qu.: 8.000   3rd Qu.: 7.250   3rd Qu.: 8.500  
+ Max.   :37.000   Max.   :24.000   Max.   :36.000  </code></pre>
 </div>
 </div>
 </section>
-<section id="compter-les-boules" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="compter-les-boules"><span class="header-section-number">3.4</span> Compter les boules</h2>
-<p>Enfin, presque… Là, on a 6 variables pour chaque numéro de 1 à 40 et chaque numéro dream de 1 à 5 pour les 82 premières lignes.</p>
-<section id="procédure" class="level3" data-number="3.4.1">
-<h3 data-number="3.4.1" class="anchored" data-anchor-id="procédure"><span class="header-section-number">3.4.1</span> Procédure</h3>
+<section id="compter-les-boules" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="compter-les-boules"><span class="header-section-number">2.4</span> Compter les boules</h2>
+<p>Enfin, presque… Là, on a 6 variables pour chaque numéro de 1 à 40 et chaque numéro dream de 1 à 5 pour les 83 premières lignes.</p>
+<section id="procédure" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="procédure"><span class="header-section-number">2.4.1</span> Procédure</h3>
 <p>Se baser uniquement sur les numéros sortis me parait inutile. Tout aussi inutile que se baser sur le nombre de sorties ou l’écart auquel est sorti un numéro. Ces données changent à chaque tirage.</p>
 <p>On va classer ces données ; <span class="math inline">\(R\)</span> dispose de beaucoup (trop) de routines de classement. J’ai choisi <code>rank()</code> en version de base (<code>average</code>) qui permet de tenir compte des égalités. Exemple :</p>
 <div class="cell">
@@ -853,20 +687,35 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
    0  125  125  125  500  625  750  750 1000 </code></pre>
 </div>
 </div>
-<p>Il classe les données sur une échelle de <span class="math inline">\(0\)</span> à <span class="math inline">\(1\)</span> et, en multipliant par <span class="math inline">\(1000\)</span>, on obtient une série.</p>
-<p>L’avantage est de ne pas avoir une suite de <span class="math inline">\(0\)</span> à <span class="math inline">\(x\)</span>, et la différence entre les occurences est clairement marquée.</p>
+<p>Il classe les données sur une échelle de <span class="math inline">\(0\)</span> à <span class="math inline">\(1\)</span> et, en multipliant par <span class="math inline">\(1\,000\)</span>, on obtient une série.</p>
+<p>L’avantage est de ne pas avoir une suite de <span class="math inline">\(0\)</span> à <span class="math inline">\(x\)</span>, et la différence entre les occurrences moindres et les occurrences élévées est clairement marquée.</p>
+<p>On peut interpréter ça autrement. Il y a <span class="math inline">\(9\)</span> données. Au lieu de <span class="math inline">\(1000\)</span>, multiplier par <span class="math inline">\(9\)</span>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">8</span>, <span class="dv">7</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">10</span>, <span class="dv">25</span>)</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">percent_rank</span>(a)</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">round</span>(b <span class="sc">*</span> <span class="dv">9</span>)</span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(b) <span class="ot">&lt;-</span> a</span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>(<span class="fu">sort</span>(b))</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> 3  5  5  5  7  8 10 10 25 
+ 0  1  1  1  4  6  7  7  9 </code></pre>
+</div>
+</div>
+<p>Ou, en étant plus pragmatique, voire puriste, en multipliant par <span class="math inline">\(8\)</span> et en ajoutant <span class="math inline">\(1\)</span>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">8</span>, <span class="dv">7</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">10</span>, <span class="dv">25</span>)</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">percent_rank</span>(a)</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">round</span>(b <span class="sc">*</span> <span class="dv">8</span>) <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(b) <span class="ot">&lt;-</span> a</span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>(<span class="fu">sort</span>(b))</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> 3  5  5  5  7  8 10 10 25 
+ 1  2  2  2  5  6  7  7  9 </code></pre>
+</div>
+</div>
 </section>
-<section id="déroulement-des-opérations" class="level3" data-number="3.4.2">
-<h3 data-number="3.4.2" class="anchored" data-anchor-id="déroulement-des-opérations"><span class="header-section-number">3.4.2</span> Déroulement des opérations</h3>
-<ol type="1">
-<li>récupérer les 6 numéros et le numéro dream du tirage 83</li>
-<li>récupérer les nombres de sorties et les écarts de tout ça
-<ol type="1">
-<li>ranger ces données quelque part</li>
-<li>mettre à jour les données (nombres sorties et écarts) suite au tirages 83</li>
-</ol></li>
-<li>retour à 1 pour le tirage 84 et continuer jusqu’au tirage 164</li>
-</ol>
+<section id="déroulement-des-opérations" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="déroulement-des-opérations"><span class="header-section-number">2.4.2</span> Déroulement des opérations</h3>
 
 
 </section>
@@ -876,19 +725,6 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    // Ensure there is a toggle, if there isn't float one in the top right
-    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-      const a = window.document.createElement('a');
-      a.classList.add('top-right');
-      a.classList.add('quarto-color-scheme-toggle');
-      a.href = "";
-      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-      const i = window.document.createElement("i");
-      i.classList.add('bi');
-      a.appendChild(i);
-      window.document.body.appendChild(a);
-    }
-    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -1290,7 +1126,7 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./intro.html" class="pagination-link" aria-label="Introduction">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

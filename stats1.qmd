@@ -30,6 +30,7 @@ Comme je suis paresseux, je demande a $R$ de le faire...
 
 On commence par affecter l'adresse du fichier à une variable, puis on invoque `dowload.file()` pour récupérer le `zip` et `unzip()` pour dézipper.
 
+
 ```{r}
 #| message: false
 #| warning: false
@@ -63,7 +64,7 @@ noms <- c("jour_de_tirage", "date_de_tirage",
 "numero_dream")
 
 # Met le fichier dans un tibble
-donnees <-
+donnees <- 
   readr::read_csv2("donnees/eurodreams_202311.csv") |> 
                    select(all_of(noms))
 ```
@@ -325,18 +326,21 @@ Enfin, presque... Là, on a 6 variables pour chaque numéro de 1 à 40 et chaque
 
 ### Procédure
 
-Se baser uniquement sur les numéros sortis me parait inutile. Tout aussi inutile que se baser sur le nombre de sorties ou l'écart auquel est sorti un numéro. Ces données changent à chaque tirage. 
+Se baser uniquement sur les numéros sortis me parait inutile. Tout aussi inutile que se baser sur le nombre de sorties ou l'écart auquel est sorti un numéro. Ces données changent à chaque tirage.
 
 On va classer ces données ; $R$ dispose de beaucoup (trop) de routines de classement. J'ai choisi `rank()` en version de base (`average`) qui permet de tenir compte des égalités. Exemple :
+
 ```{r}
 a <- c(10, 8, 7, 5, 5, 5, 3, 10, 25)
 names(a) <- a
 b <- rank(a)
 (sort(b))
 ```
+
 Le plus petit $3$ est classé $1$, les trois $5$ qui suivent prennent la place $3$ pour la moyenne de $2$, $3$ et $4$ (average == moyenne) $7$ et $8$ sont $5$ et $6$, les deux $10$ sont classés $7.5$ (moyenne de $7$ et $6$) et le $25$ est en $9$.
 
 Le `percent_rank()` peut aussi être intéressant.
+
 ```{r}
 a <- c(10, 8, 7, 5, 5, 5, 3, 10, 25)
 b <- percent_rank(a)
@@ -344,18 +348,52 @@ b <- round(b * 1000)
 names(b) <- a
 (sort(b))
 ```
-Il classe les données sur une échelle de $0$ à $1$ et, en multipliant par $1000$, on obtient une série.
 
-L'avantage est de ne pas avoir une suite de $0$ à $x$, et la différence entre les occurences est clairement marquée.
+Il classe les données sur une échelle de $0$ à $1$ et, en multipliant par $1\,000$, on obtient une série.
 
+L'avantage est de ne pas avoir une suite de $0$ à $x$, et la différence entre les occurrences moindres et les occurrences élévées est clairement marquée.
+
+On peut interpréter ça autrement. Il y a $9$ données. Au lieu de $1000$, multiplier par $9$.
+
+```{r}
+a <- c(10, 8, 7, 5, 5, 5, 3, 10, 25)
+b <- percent_rank(a)
+b <- round(b * 9)
+names(b) <- a
+(sort(b))
+```
+
+Ou, en étant plus pragmatique, voire puriste, en multipliant par $8$ et en ajoutant $1$.
+
+```{r}
+a <- c(10, 8, 7, 5, 5, 5, 3, 10, 25)
+b <- percent_rank(a)
+b <- round(b * 8) + 1
+names(b) <- a
+(sort(b))
+```
+
+Essai avec les sorties totales des numéros de 1 à 40 :
+
+```{r}
+a <- nums$so
+b <- percent_rank(a)
+b <- round(b * 39) + 1
+names(b) <- a
+(sort(b))
+```
+
+Et les numéros DREAMS
+
+```{r}
+a <- dreams$so
+b <- percent_rank(a)
+b <- round(b * 4) + 1
+names(b) <- a
+(sort(b))
+```
+
+Ça fonctionne. J'achète.
 
 ### Déroulement des opérations
-
-1. récupérer les 6 numéros et le numéro dream du tirage `r nbre_lignes + 1`
-1. récupérer les nombres de sorties et les écarts de tout ça
-   1. ranger ces données quelque part
-   1. mettre à jour les données (nombres sorties et écarts) suite au tirages `r nbre_lignes + 1`
-   
-1. retour à 1 pour le tirage `r nbre_lignes + 2` et continuer jusqu'au tirage `r 2*nbre_lignes`
-
 
