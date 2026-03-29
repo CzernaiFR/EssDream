@@ -50,10 +50,10 @@ Une fois dézippé, c'est un fichier `.csv`[^stats1-2] qui contient $32$ colonne
 
 Il n'y a que $4$ colonnes intéressantes, voire nécessaires ;
 
--   jour du tirage LUNDI ou JEUDI
--   date du tirage au format français : jour/mois/année
--   numéros tirés une chaîne de $6$ numéros mais encodés en caractères séparés par un tiret "-"
--   le numéro *dream* en chaîne de caractères
+  - jour du tirage LUNDI ou JEUDI
+  -  date du tirage au format français : jour/mois/année
+  -  numéros tirés une chaîne de $6$ numéros mais encodés en caractères séparés par un tiret "-"
+  -  le numéro *dream* en chaîne de caractères
 
 Donc, on va supprimer ce qui est inutile en indiquant uniquement ce qu'on garde (c'est plus simple).
 
@@ -238,6 +238,7 @@ head(nums)
 head(dreams)
 ```
 
+
 ## Premiers calculs
 
 On va prendre le tiers pour les données initiales.
@@ -396,4 +397,15 @@ names(b) <- a
 Ça fonctionne. J'achète.
 
 ### Déroulement des opérations
+
+Là, dimanche 23 mars 2026, on a $250$ tirages. Pour $R$, `round(250 / 3)` fait `r round(250 / 3)`. Et $3 * 83 = 249$. Il faudra en tenir compte. 
+
+Jusqu'ici, on a un tableau `nums` et un tableau `dreams` qui contiennent les situations des numéros et des numéros `dreams` après les $83$ premiers tirages. Pour le tiers suivant des tirages, du tirage $84$ au tirage $166$, on va :
+
+  - récupérer les numéros sortis ;
+  - récupérer les variables concernant ces numéros ;
+  
+
+
+
 

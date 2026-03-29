@@ -253,7 +253,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Modifié</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">27 mars 2026</p>
+      <p class="date-modified">29 mars 2026</p>
     </div>
   </div>
     
@@ -713,9 +713,42 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
  1  2  2  2  5  6  7  7  9 </code></pre>
 </div>
 </div>
+<p>Essai avec les sorties totales des numéros de 1 à 40 :</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> nums<span class="sc">$</span>so</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">percent_rank</span>(a)</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">round</span>(b <span class="sc">*</span> <span class="dv">39</span>) <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(b) <span class="ot">&lt;-</span> a</span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>(<span class="fu">sort</span>(b))</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> 4  5  8  8  8  9 10 10 10 10 10 11 11 11 11 11 11 12 12 12 12 12 13 13 13 14 
+ 1  2  3  3  3  6  7  7  7  7  7 12 12 12 12 12 12 18 18 18 18 18 23 23 23 26 
+14 14 14 15 15 15 15 16 16 17 17 18 19 22 
+26 26 26 30 30 30 30 34 34 36 36 38 39 40 </code></pre>
+</div>
+</div>
+<p>Et les numéros DREAMS</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> dreams<span class="sc">$</span>so</span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">percent_rank</span>(a)</span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">round</span>(b <span class="sc">*</span> <span class="dv">4</span>) <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(b) <span class="ot">&lt;-</span> a</span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a>(<span class="fu">sort</span>(b))</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>12 16 16 17 22 
+ 1  2  2  4  5 </code></pre>
+</div>
+</div>
+<p>Ça fonctionne. J’achète.</p>
 </section>
 <section id="déroulement-des-opérations" class="level3" data-number="2.4.2">
 <h3 data-number="2.4.2" class="anchored" data-anchor-id="déroulement-des-opérations"><span class="header-section-number">2.4.2</span> Déroulement des opérations</h3>
+<p>Là, dimanche 23 mars 2026, on a <span class="math inline">\(250\)</span> tirages. Pour <span class="math inline">\(R\)</span>, <code>round(250 / 3)</code> fait 83. Et <span class="math inline">\(3 * 83 = 249\)</span>. Il faudra en tenir compte.</p>
+<p>Jusqu’ici, on a un tableau <code>nums</code> et un tableau <code>dreams</code> qui contiennent les situations des numéros et des numéros <code>dreams</code> après les <span class="math inline">\(83\)</span> premiers tirages. Pour le tiers suivant des tirages, du tirage <span class="math inline">\(84\)</span> au tirage <span class="math inline">\(166\)</span>, on va&nbsp;:</p>
+<ul>
+<li>récupérer les numéros sortis&nbsp;;</li>
+<li>récupérer les variables concernant ces numéros&nbsp;;</li>
+</ul>
 
 
 </section>
